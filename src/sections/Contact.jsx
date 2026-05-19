@@ -22,7 +22,7 @@ const SOCIALS = [
   },
   {
     label: "Reddit",
-    href: "https://www.reddit.com/user/Klutzy-Contract-353",
+    href: "https://www.reddit.com/user/Sea_King_9010",
     icon: ImReddit,
   },
   {
