@@ -15,14 +15,14 @@ const EXPERIENCE_ITEMS = [
   },
   {
     title: "Open Source",
-    value: "Jan 2026 - Present",
+    value: "Feb 2026 - Present",
     description:
       "Contributed to public projects, collaborated on existing codebases, reviewed code, and followed community standards. Proud to say I have contributed to projects like Bindu and Agno. Best decision I took for industry exposure and learning.",
     link: "https://github.com/chandan-1427?tab=repositories", 
   },
   {
     title: "Bindu Org",
-    value: "March 2026 - Present",
+    value: "March 2026 - May 2026",
     description:
       "Built and refined AI agents across different problem domains with a focus on practical real-world use cases. Tested and iterated on agent architectures, tools, and workflows to improve reliability, and observability.",
     link: "https://getbindu.com/", 
