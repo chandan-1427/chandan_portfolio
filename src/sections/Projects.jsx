@@ -1,12 +1,12 @@
 const PROJECT_ITEMS = [
   {
-    title: "Bindu Mail Agent",
-    value: "AI Automation",
+    title: "Jyo",
+    value: "Full-Stack",
     description:
-      "An intelligent HR automation system that processes job applications via email, using AI-powered skills to extract data, evaluate completeness, and generate professional responses. Features a modular skills architecture, dynamic per-inbox requirements, comprehensive audit trails, and enterprise-grade production features.",
-    tech: ["Python", "Bindu", "Agno", "AgentMail", "Claude Skills", "Hindsight", "PostgreSQl", "HTML/CSS"],
-    github: "https://github.com/chandan-1427/mail-agent",
-    live: "",
+      "Jyo is a full-stack community food sharing platform built for Tirupati. Connects households with leftover food to nearby students and neighbours - completely free, no delivery, no payment. Features GPS-based feed, privacy-preserving location reveal, selfie verification, and a full post lifecycle state machine.",
+    tech: ["TypeScript", "React", "Hono", "PostgreSQL", "Drizzle ORM", "Supabase", "Resend"],
+    github: "https://github.com/chandan-1427/jyos",
+    live: "https://www.jyo.co.in",
   },
   {
     title: "Feedback Intelligence",
@@ -18,15 +18,6 @@ const PROJECT_ITEMS = [
     live: "https://feedback-intelligence-five.vercel.app",
   },
   {
-    title: "AI Interview Coach Agent",
-    value: "AI Agent",
-    description:
-      "An AI agent that simulates professional responses for technical interviews, demonstrating depth, real-world experience, and architectural trade-offs. Built on the Bindu Agent Framework, this agent helps technical candidates master interview narratives by providing concise, 30-second STAR method responses.",
-    tech: ["Python", "Bindu", "Langchain", "Memo", "OpenAI"],
-    github: "https://github.com/chandan-1427/interview-coaching-agent",
-    live: "",
-  },
-  {
     title: "Vessify",
     value: "Full-Stack",
     description:
@@ -34,6 +25,24 @@ const PROJECT_ITEMS = [
     tech: ["Typescript", "Next.js", "NextAuth", "Tailwindcss", "Hono", "Prisma ORM", "Better Auth"],
     github: "https://github.com/chandan-1427/text-extractor",
     live: "https://vessify-six.vercel.app",
+  },
+  {
+    title: "Bindu Mail Agent",
+    value: "AI Automation",
+    description:
+      "An intelligent HR automation system that processes job applications via email, using AI-powered skills to extract data, evaluate completeness, and generate professional responses. Features a modular skills architecture, dynamic per-inbox requirements, comprehensive audit trails, and enterprise-grade production features.",
+    tech: ["Python", "Bindu", "Agno", "AgentMail", "Claude Skills", "Hindsight", "PostgreSQl", "HTML/CSS"],
+    github: "https://github.com/chandan-1427/mail-agent",
+    live: "",
+  },
+  {
+    title: "AI Interview Coach Agent",
+    value: "AI Agent",
+    description:
+      "An AI agent that simulates professional responses for technical interviews, demonstrating depth, real-world experience, and architectural trade-offs. Built on the Bindu Agent Framework, this agent helps technical candidates master interview narratives by providing concise, 30-second STAR method responses.",
+    tech: ["Python", "Bindu", "Langchain", "Memo", "OpenAI"],
+    github: "https://github.com/chandan-1427/interview-coaching-agent",
+    live: "",
   },
 ];
 
