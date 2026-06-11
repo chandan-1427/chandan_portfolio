@@ -1,5 +1,19 @@
 const EXPERIENCE_ITEMS = [
   {
+    title: "Bindu Org",
+    value: "March 2026 - May 2026",
+    description:
+      "Built and refined AI agents across different problem domains with a focus on practical real-world use cases. Tested and iterated on agent architectures, tools, and workflows to improve reliability, and observability.",
+    link: "https://getbindu.com/", 
+  },
+  {
+    title: "Open Source",
+    value: "Feb 2026 - Present",
+    description:
+    "Contributed to public projects, collaborated on existing codebases, reviewed code, and followed community standards. Proud to say I have contributed to projects like Bindu and Agno. Best decision I took for industry exposure and learning.",
+    link: "https://github.com/chandan-1427?tab=repositories", 
+  },
+  {
     title: "Rooman Technologies",
     value: "Feb 2025 - June 2025",
     description:
@@ -12,20 +26,6 @@ const EXPERIENCE_ITEMS = [
     description:
       "Built end-to-end web applications across frontend, backend, APIs, authentication, and databases using TypeScript, React, Node.js, Hono, PostgreSQL, and ORMs like Prisma.",
     link: "https://github.com/chandan-1427?tab=repositories", 
-  },
-  {
-    title: "Open Source",
-    value: "Feb 2026 - Present",
-    description:
-      "Contributed to public projects, collaborated on existing codebases, reviewed code, and followed community standards. Proud to say I have contributed to projects like Bindu and Agno. Best decision I took for industry exposure and learning.",
-    link: "https://github.com/chandan-1427?tab=repositories", 
-  },
-  {
-    title: "Bindu Org",
-    value: "March 2026 - May 2026",
-    description:
-      "Built and refined AI agents across different problem domains with a focus on practical real-world use cases. Tested and iterated on agent architectures, tools, and workflows to improve reliability, and observability.",
-    link: "https://getbindu.com/", 
   },
 ];
 
@@ -69,7 +69,7 @@ export default function AboutSection() {
 
         {/* Experience */}
         <div className="space-y-[2.618rem]">
-          <h3 className="text-[0.658rem] uppercase tracking-[0.382em] text-white/[0.382]">
+          <h3 className="text-[0.758rem] uppercase tracking-[0.382em] text-white/[0.582]">
             Experience
           </h3>
 
