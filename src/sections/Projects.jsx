@@ -13,18 +13,9 @@ const PROJECT_ITEMS = [
     value: "Full-Stack",
     description:
       "A comprehensive full-stack application for collecting, analyzing, and managing customer feedback with AI-powered insights, theme extraction, and intelligent solution generation. Transforms customer feedback into actionable insights through feedback collection interface, AI analysis and comprehensive analytics dashboard.",
-    tech: ["TypeScript", "React", "Node.js", "Hono", "PostgreSQL", "JWT", "Zod", "Groq", "TailwindCSS", "Vite", "Recharts"],
+    tech: ["TypeScript", "React", "Node.js", "Hono", "PostgreSQL", "JWT", "Zod", "Groq", "TailwindCSS", "Recharts"],
     github: "https://github.com/chandan-1427/feedback-intelligence",
     live: "https://feedback-intelligence-five.vercel.app",
-  },
-  {
-    title: "Vessify",
-    value: "Full-Stack",
-    description:
-      "Vessify is a full-stack SaaS application designed to extract and structure financial transaction data from unstructured sources like bank SMS messages and financial statements. Converts raw financial statements into structured data instantly.",
-    tech: ["Typescript", "Next.js", "NextAuth", "Tailwindcss", "Hono", "Prisma ORM", "Better Auth"],
-    github: "https://github.com/chandan-1427/text-extractor",
-    live: "https://vessify-six.vercel.app",
   },
   {
     title: "Bindu Mail Agent",
@@ -39,8 +30,8 @@ const PROJECT_ITEMS = [
     title: "AI Interview Coach Agent",
     value: "AI Agent",
     description:
-      "An AI agent that simulates professional responses for technical interviews, demonstrating depth, real-world experience, and architectural trade-offs. Built on the Bindu Agent Framework, this agent helps technical candidates master interview narratives by providing concise, 30-second STAR method responses.",
-    tech: ["Python", "Bindu", "Langchain", "Memo", "OpenAI"],
+      "An AI agent that simulates professional responses for technical interviews, demonstrating depth, real-world experience, and architectural trade-offs. Built on the Bindu Agent Framework, this agent helps technical candidates prepare for interview narratives by providing concise, 30-second STAR method responses for confidence, clarity and impact.",
+    tech: ["Python", "Bindu", "Langchain", "Mem0", "OpenAI"],
     github: "https://github.com/chandan-1427/interview-coaching-agent",
     live: "",
   },
