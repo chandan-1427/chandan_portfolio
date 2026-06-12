@@ -102,7 +102,7 @@ export default function SkillsSection() {
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-[0.3rem] border border-white/[0.146] bg-white/[0.056] px-[0.764rem] py-[0.382rem] text-[0.73rem] tracking-[0.12em] text-white/[0.72]"
+                    className="rounded-[0.3rem] border border-white/[0.146] bg-white/[0.056] px-[0.764rem] py-[0.382rem] text-[0.73rem] tracking-[0.1em] text-white/[0.72]"
                   >
                     {skill}
                   </span>

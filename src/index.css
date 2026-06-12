@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+/* fonts */
+@import "@fontsource-variable/geist";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
 @import "tailwindcss";
 
 @theme {
-  --font-geist: "Geist", sans-serif;
-  --font-work: "Work Sans", sans-serif;
+  --font-geist: "Geist Variable", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
 
 @layer base {
@@ -13,8 +19,13 @@
     scroll-behavior: smooth;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-geist);
+  }
+
   body {
-    @apply bg-[#1F1F1E] text-white/[0.918] font-geist antialiased;
+    @apply bg-[#1F1F1E] text-white/[0.918] antialiased;
+    font-family: var(--font-inter);
   }
 
   /* Chrome, Edge, Safari */
