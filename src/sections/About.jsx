@@ -3,7 +3,7 @@ const EXPERIENCE_ITEMS = [
     title: "Bindu Org",
     value: "March 2026 - May 2026",
     description:
-      "Built and refined AI agents across different problem domains with a focus on practical real-world use cases. Tested and iterated on agent architectures, tools, and workflows to improve reliability, and observability.",
+      "Built and refined AI agents across different problem domains with a focus on practical real-world use cases. Tested and iterated on agent architectures, tools, and workflows to improve reliability, and observability. Contributed to docs and repo maintenance.",
     link: "https://getbindu.com/", 
   },
   {
