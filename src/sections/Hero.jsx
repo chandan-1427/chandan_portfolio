@@ -41,7 +41,7 @@ export default function HeroSection() {
               <span
                 key={`${letter}-${index}`}
                 aria-hidden="true"
-                className="inline-block font-work text-[50px] font-medium tracking-[0.12em] text-white transition-all duration-700 ease-out md:text-[90px] lg:text-[110px]"
+                className="inline-block text-[50px] font-medium tracking-[0.12em] text-white transition-all duration-700 ease-out md:text-[90px] lg:text-[110px]"
                 style={{
                   opacity: isVisible ? 1 : 0,
                   transform: isVisible

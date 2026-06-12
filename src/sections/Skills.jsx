@@ -77,7 +77,7 @@ export default function SkillsSection() {
             Skills
           </p>
 
-          <h2 className="max-w-[48rem] font-work text-[1.418rem] leading-[1] text-white/[0.918] md:text-[2.218rem] lg:text-[3.236rem]">
+          <h2 className="max-w-[48rem] text-[1.418rem] leading-[1] text-white/[0.918] md:text-[2.218rem] lg:text-[3.236rem]">
             Skills built through real projects and practical work.
           </h2>
         </header>
@@ -89,7 +89,7 @@ export default function SkillsSection() {
               className="rounded-[0.5rem] border border-white/[0.146] bg-white/[0.034] p-[1.618rem] backdrop-blur-[0.236rem]"
             >
               <div className="mb-[1.618rem] space-y-[0.764rem]">
-                <h4 className="font-work text-[1rem] font-medium leading-[1.2] text-white/[0.918]">
+                <h4 className="text-[1rem] font-medium leading-[1.2] text-white/[0.918]">
                   {group.title}
                 </h4>
 

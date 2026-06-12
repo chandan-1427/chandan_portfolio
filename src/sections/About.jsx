@@ -54,7 +54,7 @@ export default function AboutSection() {
             About
           </p>
 
-          <h2 className="font-work text-[1.418rem] leading-[1] text-white/[0.918] md:text-[2.218rem] lg:text-[3.236rem]">
+          <h2 className="text-[1.418rem] leading-[1] text-white/[0.918] md:text-[2.218rem] lg:text-[3.236rem]">
             Building practical AI agents and full-stack systems that are
             reliable, scalable, and grounded in real-world problems.
           </h2>
@@ -80,11 +80,11 @@ export default function AboutSection() {
                 className="rounded-[0.5rem] border border-white/[0.146] bg-white/[0.034] p-[1.618rem] text-white backdrop-blur-[0.236rem]"
               >
                 <div className="mb-[1.618rem] flex flex-col gap-[0.764rem] sm:flex-row sm:items-start sm:justify-between sm:gap-[1rem]">
-                  <h4 className="font-work text-[1rem] font-medium leading-[1.2] text-white/[0.918]">
+                  <h4 className="text-[1rem] font-medium leading-[1.2] text-white/[0.918]">
                     {item.title}
                   </h4>
 
-                  <span className="w-fit shrink-0 text-[0.76rem] tracking-[0.16em] text-white/[0.618] sm:text-right">
+                  <span className="w-fit shrink-0 text-[0.76rem] tracking-[0.06em] text-white/[0.618] sm:text-right">
                     {item.value}
                   </span>
                 </div>

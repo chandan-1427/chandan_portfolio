@@ -54,7 +54,7 @@ export default function ProjectsSection() {
             Projects
           </p>
 
-          <h2 className="max-w-[48rem] font-work text-[1.418rem] leading-[1] text-white/[0.918] md:text-[2.218rem] lg:text-[3.236rem]">
+          <h2 className="max-w-[48rem] text-[1.418rem] leading-[1] text-white/[0.918] md:text-[2.218rem] lg:text-[3.236rem]">
             My work across AI agents, and full-stack applications.
           </h2>
         </header>
@@ -66,11 +66,11 @@ export default function ProjectsSection() {
               className="rounded-[0.5rem] border border-white/[0.146] bg-white/[0.034] p-[1.618rem] text-white backdrop-blur-[0.236rem]"
             >
               <div className="mb-[1.618rem] flex flex-col gap-[0.764rem] sm:flex-row sm:items-start sm:justify-between">
-                <h3 className="font-work text-[1rem] font-medium leading-[1.2] text-white/[0.918]">
+                <h3 className="text-[1rem] font-medium leading-[1.2] text-white/[0.918]">
                   {item.title}
                 </h3>
 
-                <span className="w-fit shrink-0 text-[0.76rem] tracking-[0.16em] text-white/[0.618] sm:text-right">
+                <span className="w-fit shrink-0 text-[0.76rem] tracking-[0.14em] text-white/[0.618] sm:text-right">
                   {item.value}
                 </span>
               </div>
