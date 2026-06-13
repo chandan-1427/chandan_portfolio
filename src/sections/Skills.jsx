@@ -41,8 +41,8 @@ const SKILL_GROUPS = [
       "System design",
       "Tool design",
       "Retrieval systems",
-      "Reliability engineering",
       "Security",
+      "Reliability engineering",
       "Evaluation & Observation",
       "Skill building"
     ],
@@ -57,6 +57,8 @@ const SKILL_GROUPS = [
       "Docker",
       "Vercel",
       "Render",
+      "Resend",
+      "Cloudflare",
       "Postman",
       "VS Code",
       "pgAdmin",
@@ -102,7 +104,7 @@ export default function SkillsSection() {
                 {group.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-[0.3rem] border border-white/[0.146] bg-white/[0.056] px-[0.764rem] py-[0.382rem] text-[0.73rem] tracking-[0.1em] text-white/[0.72]"
+                    className="rounded-[0.3rem] border border-white/[0.146] bg-white/[0.056] px-[0.764rem] py-[0.382rem] text-[0.618rem] uppercase tracking-[0.18em] text-white/[0.618]"
                   >
                     {skill}
                   </span>
