@@ -4,12 +4,14 @@
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/600.css";
 @import "@fontsource/inter/700.css";
+@import "@fontsource/stalemate";
 
 @import "tailwindcss";
 
 @theme {
   --font-geist: "Geist Variable", sans-serif;
   --font-inter: "Inter", sans-serif;
+  --font-stalemate: "Stalemate", sans-serif;
 }
 
 @layer base {
@@ -21,6 +23,10 @@
 
   h1, h2, h3 {
     font-family: var(--font-geist);
+  }
+
+  h6 {
+    font-family: var(--font-stalemate)
   }
 
   body {
