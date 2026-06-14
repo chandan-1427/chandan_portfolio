@@ -2,7 +2,7 @@ const SKILL_GROUPS = [
   {
     title: "Frontend",
     description:
-      "I focus on clean, and minimal design and maintainance.",
+      "I focus on clean, minimal, intentional design and long-term maintainability.",
     skills: [
       "React",
       "Next.js",
@@ -50,7 +50,7 @@ const SKILL_GROUPS = [
   {
     title: "Tools & Workflow",
     description:
-      "Rooted workflow and tool usage.",
+      "Perform tasks using workflows and tools.",
     skills: [
       "Git",
       "GitHub",
