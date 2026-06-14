@@ -66,10 +66,16 @@ export default function HeroSection() {
 
           <a
             href="/chandan.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative mt-8 w-fit shrink-0 flex items-center gap-2 rounded-[0.3rem] border border-white/[0.146] bg-white/[0.056] px-[0.764rem] py-[0.382rem] text-[0.618rem] uppercase tracking-[0.18em] text-white/[0.618] transition-colors duration-300 hover:bg-white/[0.126] hover:text-white/80 active:bg-white/[0.146] sm:mt-10"
-            >
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative mt-8 w-fit shrink-0 flex items-center gap-2 rounded-[0.3rem] border border-white/[0.146] bg-white/[0.056] px-[0.764rem] py-[0.382rem] text-[0.618rem] uppercase tracking-[0.18em] text-white/[0.618] transition-colors duration-300 hover:bg-white/[0.126] hover:text-white/80 active:bg-white/[0.146] sm:mt-10"
+            style={{
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? "translateY(0)" : "translateY(1rem)",
+              transitionDelay: `${letters.length * 80 + 500}ms`,
+              transition: "opacity 700ms ease-out, transform 700ms ease-out",
+            }}
+          >
               <HiOutlineDocumentText size={14} />
               Resume
 
