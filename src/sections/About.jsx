@@ -49,22 +49,22 @@ export default function AboutSection() {
     <section id="about" className="relative px-[1.618rem] py-[6.854rem] text-white md:px-[2.618rem] lg:px-[4.236rem]">
       <div className="mx-auto flex max-w-[68.54rem] flex-col gap-[4.236rem]">
         {/* Header */}
-        <header className="space-y-[1.618rem]">
-          <p className="text-[0.658rem] uppercase tracking-[0.382em] text-white/[0.382]">
-            About
-          </p>
+        <div className="space-y-[2.618rem]">
+          <header className="space-y-[1.618rem]">
+            <p className="text-[0.658rem] uppercase tracking-[0.382em] text-white/[0.382]">
+              About
+            </p>
+            <h2 className="text-[1.418rem] leading-[1.2] text-white/[0.918] md:text-[2.218rem] md:leading-[1] lg:text-[3.236rem]">
+              Building practical AI agents and full-stack systems that are
+              reliable, scalable, and grounded in real-world problems.
+            </h2>
+          </header>
 
-          <h2 className="text-[1.418rem] leading-[1] text-white/[0.918] md:text-[2.218rem] lg:text-[3.236rem]">
-            Building practical AI agents and full-stack systems that are
-            reliable, scalable, and grounded in real-world problems.
-          </h2>
-        </header>
-
-        {/* Body text */}
-        <div className="space-y-[1.618rem] text-white/[0.618]">
-          {ABOUT_PARAGRAPHS.map((paragraph, index) => (
-            <AboutParagraph key={index}>{paragraph}</AboutParagraph>
-          ))}
+          <div className="space-y-[1.618rem] text-white/[0.618]">
+            {ABOUT_PARAGRAPHS.map((paragraph, index) => (
+              <AboutParagraph key={index}>{paragraph}</AboutParagraph>
+            ))}
+          </div>
         </div>
 
         {/* Experience */}
