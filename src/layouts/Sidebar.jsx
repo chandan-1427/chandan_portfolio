@@ -44,7 +44,7 @@ export default function Sidebar() {
       </aside>
 
       {/* Mobile Bottom Navigation */}
-      <nav className="fixed bottom-[1rem] left-1/2 z-50 flex w-[calc(100%-1.618rem)] max-w-[28rem] -translate-x-1/2 items-center justify-between rounded-[0.75rem] border border-white/[0.12] bg-[#0D0D0D]/80 px-[0.5rem] py-[0.5rem] backdrop-blur-[20px] lg:hidden">
+      <nav className="fixed bottom-[1rem] left-1/2 z-50 flex w-[calc(100%-1.618rem)] max-w-[28rem] -translate-x-1/2 items-center justify-between rounded-[0.75rem] border border-white/[0.12] bg-[#202020] px-[0.5rem] py-[0.5rem] backdrop-blur-[20px] lg:hidden">
         {LINKS.map((item) => (
           <button
             key={item.id}
