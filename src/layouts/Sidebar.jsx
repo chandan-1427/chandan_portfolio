@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import { scrollTo } from "../lib/scrollTo";
 
 const LINKS = [
   { id: "hero",     label: "Hero"     },
@@ -48,17 +49,7 @@ function NavButton({ item, variant, onClick }) {
 }
 
 export default function Sidebar() {
-  const handleClick = useCallback((id) => {
-    const el = document.getElementById(id);
-    if (!el) return;
-
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    el.scrollIntoView({
-      behavior: prefersReduced ? "instant" : "smooth",
-      block: "start",
-    });
-  }, []);
+  const handleClick = useCallback((id) => scrollTo(id), []);
 
   return (
     <>
