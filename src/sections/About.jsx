@@ -1,5 +1,6 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { EXPERIENCE_ITEMS } from "../data/experience_items";
+import SectionEyebrow from "../components/SectionEyebrow";
 
 const ABOUT_PARAGRAPHS = [
   "I'm Dakka Chandan, a full-stack developer and AI engineer from Kadapa, Andhra Pradesh, India. I design and build agents and web applications that are understandable, maintainable, and focused on solving real problems rather than chasing hype.",
@@ -49,9 +50,8 @@ export default function AboutSection() {
       <div className="mx-auto flex max-w-[68.54rem] flex-col gap-[4.236rem]">
         <div className="space-y-[2.618rem]">
           <div className="space-y-[1.618rem]">
-            <p className="text-[0.658rem] uppercase tracking-[0.382em] text-white/[0.382]">
-              About
-            </p>
+            <SectionEyebrow label="About" />
+
             <h2 className="text-[1.418rem] leading-[1.2] text-white/[0.918] md:text-[2.218rem] md:leading-[1] lg:text-[3.236rem]">
               Building practical AI agents and full-stack systems that are
               reliable, scalable, and grounded in real-world problems.
@@ -68,10 +68,8 @@ export default function AboutSection() {
         </div>
 
         <div className="space-y-[2.618rem]">
-          <h3 className="text-[0.758rem] uppercase tracking-[0.382em] text-white/[0.582]">
-            Experience
-          </h3>
-
+          <SectionEyebrow label="Experience" className="text-[0.758rem] text-white/[0.582]" />
+          
           <div className="grid gap-[1.618rem] md:grid-cols-2 md:gap-[2.618rem]">
             {EXPERIENCE_ITEMS.map((item) => (
               <ExperienceCard key={item.title} {...item} />

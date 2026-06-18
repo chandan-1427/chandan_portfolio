@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SOCIALS } from "../data/socials";
+import SectionEyebrow from "../components/SectionEyebrow";
 
 const EMAIL = "chandandakka@gmail.com";
 
@@ -24,15 +25,11 @@ export default function ContactSection() {
   return (
     <section id="contact" className="relative overflow-visible px-[1.618rem] py-[6.854rem] text-white md:px-[2.618rem] lg:px-[4.236rem]">
       <div className="relative z-10 mx-auto flex max-w-[68.54rem] flex-col gap-[2.618rem]">
-        <p className="text-[0.858rem] uppercase tracking-[0.382em] text-white/[0.382]">
-          Contact
-        </p>
+        <SectionEyebrow label="Contact" className="text-[0.858rem]" />
 
         <div className="grid gap-[2rem] md:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] md:items-start md:gap-[2.618rem]">
           <div className="space-y-[0.764rem] md:space-y-[1rem]">
-            <p className="text-[0.85rem] uppercase tracking-[0.26em] text-white/[0.5]">
-              Email
-            </p>
+            <SectionEyebrow label="Email" className="text-[0.75rem] text-white/[0.5] tracking-widest" />
 
             <div className="rounded-[0.5rem] border border-white/[0.146] bg-black/[0.24] p-[1rem] backdrop-blur-[14px] sm:p-[1.25rem] md:p-[1.618rem]">
               <div className="flex flex-wrap items-center gap-[0.764rem]">
@@ -52,9 +49,7 @@ export default function ContactSection() {
           </div>
 
           <div className="space-y-[0.764rem] md:space-y-[1rem]">
-            <p className="text-[0.85rem] uppercase tracking-[0.26em] text-white/[0.5]">
-              Social
-            </p>
+            <SectionEyebrow label="social" className="text-[0.75rem] text-white/[0.5] tracking-widest" />
 
             <div className="flex min-w-max gap-[0.764rem] pb-[0.25rem]">
               {SOCIALS.map(({ label, href, icon: Icon }) => (

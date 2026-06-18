@@ -1,4 +1,5 @@
 import { SKILL_GROUPS } from "../data/skills";
+import SectionEyebrow from "../components/SectionEyebrow";
 
 function SkillCard({ title, description, skills }) {
   return (
@@ -31,9 +32,8 @@ export default function SkillsSection() {
     <section id="skills" className="relative px-[1.618rem] py-[6.854rem] text-white md:px-[2.618rem] lg:px-[4.236rem]">
       <div className="mx-auto flex max-w-[68.54rem] flex-col gap-[2.618rem]">
         <div className="space-y-[1.618rem]">
-          <p className="text-[0.658rem] uppercase tracking-[0.382em] text-white/[0.382]">
-            Skills
-          </p>
+          <SectionEyebrow label="Skills" />
+          
           <h2 className="max-w-[48rem] text-[1.418rem] leading-[1] text-white/[0.918] md:text-[2.218rem] lg:text-[3.236rem]">
             Skills built through real projects and practical work.
           </h2>
