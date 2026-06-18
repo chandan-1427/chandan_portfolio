@@ -25,10 +25,6 @@
     font-family: var(--font-geist);
   }
 
-  h6 {
-    font-family: var(--font-stalemate)
-  }
-
   body {
     @apply bg-[#1F1F1E] text-white/[0.918] antialiased;
     font-family: var(--font-inter);
