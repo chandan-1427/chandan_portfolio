@@ -4,34 +4,21 @@ import Lenis from "lenis";
 import Sidebar from "./layouts/Sidebar";
 import Footer from "./layouts/Footer";
 
-import HeroSection from "./sections/Hero";
-
-const AboutSection = lazy(() => import("./sections/About"));
-const SkillsSection = lazy(() => import("./sections/Skills"));
+const HeroSection    = lazy(() => import("./sections/Hero"));
+const AboutSection   = lazy(() => import("./sections/About"));
+const SkillsSection  = lazy(() => import("./sections/Skills"));
 const ProjectsSection = lazy(() => import("./sections/Projects"));
 const ContactSection = lazy(() => import("./sections/Contact"));
 
 export default function App() {
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReducedMotion) return;
 
-    const lenis = new Lenis({
-      duration: 1.2,
-      smoothWheel: true,
-    });
+    const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
 
-    let rafId;
-
-    const raf = (time) => {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    };
-
-    rafId = requestAnimationFrame(raf);
+    const raf = (time) => lenis.raf(time) || requestAnimationFrame(raf);
+    const rafId = requestAnimationFrame(raf);
 
     return () => {
       cancelAnimationFrame(rafId);
