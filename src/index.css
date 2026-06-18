@@ -2,58 +2,61 @@
 @import "@fontsource-variable/geist";
 @import "@fontsource/inter/400.css";
 @import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/inter/700.css";
 @import "@fontsource/stalemate";
 
 @import "tailwindcss";
 
 @theme {
-  --font-geist: "Geist Variable", sans-serif;
-  --font-inter: "Inter", sans-serif;
+  --font-geist:     "Geist Variable", sans-serif;
+  --font-inter:     "Inter", sans-serif;
   --font-stalemate: "Stalemate", sans-serif;
 }
 
 @layer base {
+  :root {
+    --color-bg:             #1F1F1E;
+    --scrollbar-thumb:      rgba(255, 255, 255, 0.18);
+    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.28);
+  }
+
   html {
     scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.22) #1F1F1E;
+    scrollbar-color: var(--scrollbar-thumb) var(--color-bg);
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
+    background: var(--color-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border: 2px solid var(--color-bg);
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: rgba(255, 255, 255, 0.918);
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2 {
     font-family: var(--font-geist);
   }
 
-  body {
-    @apply bg-[#1F1F1E] text-white/[0.918] antialiased;
-    font-family: var(--font-inter);
-  }
-
   ::selection {
     background: rgba(255, 255, 255, 0.12);
     color: rgba(255, 255, 255, 0.98);
-  }
-
-  /* Chrome, Edge, Safari */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #1F1F1E;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.18);
-    border: 2px solid #1F1F1E;
-    border-radius: 999px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.28);
-  }
-
-  ::-webkit-scrollbar-corner {
-    background: #1F1F1E;
   }
 }
