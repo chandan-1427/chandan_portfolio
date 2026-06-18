@@ -1,6 +1,6 @@
 import { scrollTo } from "../lib/scrollTo";
 
-export const Footer = () => {
+export default function Footer () {
   return (
     <footer className="flex w-full flex-col items-center gap-2 pt-16 pb-24 md:pb-16">
       <button

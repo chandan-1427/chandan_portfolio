@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect } from "react";
 import Lenis from "lenis";
 
 import Sidebar from "./layouts/Sidebar";
-import { Footer } from "./layouts/Footer";
+import Footer from "./layouts/Footer";
 
 import HeroSection from "./sections/Hero";
 
