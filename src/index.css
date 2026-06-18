@@ -18,7 +18,6 @@
   html {
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.22) #1F1F1E;
-    scroll-behavior: smooth;
   }
 
   h1, h2 {
