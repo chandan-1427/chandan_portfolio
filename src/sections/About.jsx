@@ -3,6 +3,7 @@ import { EXPERIENCE_ITEMS } from "../data/experience_items";
 import SectionEyebrow from "../components/SectionEyebrow";
 import Description from "../components/Description";
 import MetaDataRow from "../components/MetaDataRow";
+import LinkButton from "../components/LinkButton";
 
 const ABOUT_PARAGRAPHS = [
   "I'm Dakka Chandan, a full-stack developer and AI engineer from Kadapa, Andhra Pradesh, India. I design and build agents and web applications that are understandable, maintainable, and focused on solving real problems rather than chasing hype.",
@@ -19,16 +20,10 @@ function ExperienceCard({ title, value, description, link, domain }) {
       <Description desc={description} />
 
       <div className="flex justify-end border-t border-white/[0.08] pt-[0.8rem]">
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group relative flex w-fit shrink-0 items-center gap-1 rounded-[0.3rem] border border-white/[0.146] bg-white/[0.056] px-[0.764rem] py-[0.382rem]
-            tracking-wide text-[0.75rem] text-white/[0.618] transition-colors duration-300 hover:bg-white/[0.126] hover:text-white/80 active:bg-white/[0.146]"
-        >
+        <LinkButton href={link}>
           <span>{domain}</span>
           <IoIosArrowForward />
-        </a>
+        </LinkButton>
       </div>
     </div>
   );
