@@ -1,5 +1,6 @@
 import { SKILL_GROUPS } from "../data/skills";
 import SectionEyebrow from "../components/SectionEyebrow";
+import TagList from "../components/TagList";
 
 function SkillCard({ title, description, skills }) {
   return (
@@ -12,17 +13,8 @@ function SkillCard({ title, description, skills }) {
           {description}
         </p>
       </div>
-
-      <div className="flex flex-wrap gap-[0.764rem]">
-        {skills.map((skill) => (
-          <span
-            key={skill}
-            className="rounded-[0.3rem] border border-white/[0.146] bg-white/[0.056] px-[0.764rem] py-[0.382rem] text-[0.78rem] tracking-wide text-white/[0.618]"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
+ 
+      <TagList tags={skills} />
     </div>
   );
 }
