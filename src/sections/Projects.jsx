@@ -2,6 +2,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { PROJECT_ITEMS } from "../data/projects";
 import SectionEyebrow from "../components/SectionEyebrow";
 import TagList from "../components/TagList";
+import Description from "../components/Description";
 
 function LinkButton({ href, variant = "code", children }) {
   const variants = {
@@ -33,9 +34,7 @@ function ProjectCard({ title, value, description, tech, github, live }) {
         </span>
       </div>
 
-      <p className="text-[1rem] leading-[1.618] text-white/[0.618]">
-        {description}
-      </p>
+      <Description desc={description} />
 
       <TagList tags={tech} className="gap-[0.618rem]"/>
 
