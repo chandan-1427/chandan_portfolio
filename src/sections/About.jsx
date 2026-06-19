@@ -2,6 +2,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { EXPERIENCE_ITEMS } from "../data/experience_items";
 import SectionEyebrow from "../components/SectionEyebrow";
 import SectionHeading from "../components/SectionHeading";
+import Card from "../components/Card";
 import Description from "../components/Description";
 import MetaDataRow from "../components/MetaDataRow";
 import LinkButton from "../components/LinkButton";
@@ -15,7 +16,7 @@ const ABOUT_PARAGRAPHS = [
 
 function ExperienceCard({ title, value, description, link, domain }) {
   return (
-    <div className="flex flex-col gap-[1.618rem] rounded-[0.5rem] border border-white/[0.146] bg-white/[0.034] p-[1.618rem] backdrop-blur-[4px]">
+    <Card>
       <MetaDataRow title={title} value={value} />
 
       <Description desc={description} />
@@ -26,7 +27,7 @@ function ExperienceCard({ title, value, description, link, domain }) {
           <IoIosArrowForward />
         </LinkButton>
       </div>
-    </div>
+    </Card>
   );
 }
 
@@ -40,7 +41,7 @@ export default function AboutSection() {
         <div className="space-y-[2.618rem]">
           <div className="space-y-[1.618rem]">
             <SectionEyebrow label="About" />
-            
+
             <SectionHeading>
               Building practical AI agents and full-stack systems that are
               reliable, scalable, and grounded in real-world problems.
