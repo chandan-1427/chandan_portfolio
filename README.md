@@ -110,7 +110,7 @@ This is a small project, but it represents my design mindset. I prefer clean and
    ```
 2. Move into the project directory:
    ```bash
-   cd portfolio_1
+   cd chandan_portfolio
    ```
 3. Install dependencies:
    ```bash
