@@ -18,12 +18,13 @@ This project is a small example of choosing clarity, simplicity, and readability
 
 #### Tech Stack
 
-- React 19
-- Vite
+- React 19.2.4
+- Vite 8
 - Tailwind CSS 4.2.2
 - Lenis (smooth scrolling)
 - React Icons
-- Geist and Work Sans fonts
+- Tailwind Merge
+- Geist, Inter, and Stalemate fonts
 
 #### Features
 
@@ -31,28 +32,48 @@ This project is a small example of choosing clarity, simplicity, and readability
 - Sidebar navigation (desktop)
 - Bottom navigation (mobile)
 - Hero section with animated text
-- About section with experience timeline
+- Downloadable resume
+- About section with experience cards
 - Skills section with categorized technologies
-- Projects showcase
-- Contact section
-- Lazy loading with React Suspense
+- Data-driven projects showcase with live and source-code links
+- Contact section with email copy and social links
+- Reusable cards, tags, buttons, metadata rows, and tooltips
+- Back-to-top footer
+- Lazy-loaded sections with React Suspense
 - Reduced motion support
+- Custom scrollbar and text selection styles
 
 #### Project Structure
 
 ```
 src/
+  components/
+    Description.jsx       # Shared descriptive text
+    LinkButton.jsx        # External link button
+    MetaDataRow.jsx       # Card title and metadata
+    SectionEyebrow.jsx    # Section label
+    TagList.jsx           # Reusable technology tags
+    ToolTip.jsx           # Navigation and social tooltips
+  data/
+    experience_items.js   # Experience content
+    projects.js           # Project content
+    skills.js             # Grouped skills
+    socials.js            # Social links
   layouts/
-    Sidebar.jsx          # Navigation component
+    Footer.jsx            # Back-to-top footer
+    Sidebar.jsx           # Responsive navigation
+  lib/
+    cn.js                 # Tailwind class merging utility
+    scrollTo.js           # Accessible section scrolling
   sections/
-    Hero.jsx             # Landing section
-    About.jsx            # Experience and background
-    Skills.jsx           # Technical skills
-    Projects.jsx         # Project showcase
-    Contact.jsx          # Contact information
-  App.jsx                # Main application component
-  index.css              # Global styles and Tailwind
-  main.jsx               # React entry point
+    Hero.jsx              # Landing section and resume link
+    About.jsx             # Background and experience
+    Skills.jsx            # Categorized technical skills
+    Projects.jsx          # Project showcase
+    Contact.jsx           # Email and social links
+  App.jsx                 # App layout, lazy loading, and Lenis setup
+  index.css               # Fonts, global styles, and Tailwind theme
+  main.jsx                # React entry point
 ```
 
 #### Design Approach
@@ -60,6 +81,8 @@ src/
 The UI is minimal because I believe less is more. Subtle transparency in theme creates depth without distraction. Spacing, typography, and layout are kept simple to maintain readability across all devices.
 
 Reusable components are used to keep the code maintainable and consistent. The sidebar navigation and section layouts follow the same patterns throughout the site.
+
+Experience, skills, projects, and social links are kept in dedicated data files. This separates portfolio content from the UI and makes updates simpler without changing the section components.
 
 Readability and maintainability were prioritized over complex effects. The animations are subtle and purposeful, enhancing the user experience without overwhelming the content.
 
@@ -79,17 +102,17 @@ This is a small project, but it represents my design mindset. I prefer clean and
    ```bash
    git clone https://github.com/chandan-1427/portfolio_1.git
    ```
-2. Install dependencies:
+2. Move into the project directory:
    ```bash
    cd portfolio_1
    ```
 3. Install dependencies:
    ```bash
-   npm install
+   pnpm install
    ```
 4. Start the development server:
    ```bash
-   npm run dev
+   pnpm dev
    ```
 5. Open [http://localhost:5173](http://localhost:5173) in your browser
 
@@ -97,12 +120,19 @@ This is a small project, but it represents my design mindset. I prefer clean and
 
 To build for production:
 ```bash
-npm run build
+pnpm build
 ```
 
 Preview the production build:
 ```bash
-npm run preview
+pnpm preview
+```
+
+#### Lint
+
+To check the code with ESLint:
+```bash
+pnpm lint
 ```
 
 #### Contributions, suggestions, and feedback are always welcome. Have a good day - CHANDAN
