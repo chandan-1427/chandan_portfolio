@@ -36,7 +36,7 @@ export default function HeroSection() {
               <span
                 key={`${letter}-${index}`}
                 aria-hidden="true"
-                className="inline-block text-[50px] font-medium tracking-[0.12em] text-white md:text-[90px] lg:text-[110px]"
+                className="inline-block text-[50px] font-medium tracking-[0.12em] text-white/[0.918] md:text-[90px] lg:text-[110px]"
                 style={{
                   opacity: isVisible ? 1 : 0,
                   transform: isVisible
