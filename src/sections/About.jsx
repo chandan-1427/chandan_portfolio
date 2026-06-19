@@ -2,6 +2,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { EXPERIENCE_ITEMS } from "../data/experience_items";
 import SectionEyebrow from "../components/SectionEyebrow";
 import Description from "../components/Description";
+import MetaDataRow from "../components/MetaDataRow";
 
 const ABOUT_PARAGRAPHS = [
   "I'm Dakka Chandan, a full-stack developer and AI engineer from Kadapa, Andhra Pradesh, India. I design and build agents and web applications that are understandable, maintainable, and focused on solving real problems rather than chasing hype.",
@@ -13,14 +14,7 @@ const ABOUT_PARAGRAPHS = [
 function ExperienceCard({ title, value, description, link, domain }) {
   return (
     <div className="flex flex-col gap-[1.618rem] rounded-[0.5rem] border border-white/[0.146] bg-white/[0.034] p-[1.618rem] backdrop-blur-[4px]">
-      <div className="flex flex-col gap-[0.764rem] sm:flex-row sm:items-start sm:justify-between sm:gap-[1rem]">
-        <h3 className="text-[1rem] font-medium leading-[1.2] text-white/[0.918]">
-          {title}
-        </h3>
-        <span className="w-fit shrink-0 text-[0.76rem] tracking-[0.06em] text-white/[0.618] sm:text-right">
-          {value}
-        </span>
-      </div>
+      <MetaDataRow title={title} value={value} />
 
       <Description desc={description} />
 
