@@ -22,7 +22,7 @@ function ProjectCard({ title, value, description, tech, github, live }) {
           </LinkButton>
         )}
 
-        <LinkButton href={github} variant="code">
+        <LinkButton href={github}>
           <span className="flex items-center gap-1"> Code <IoIosArrowForward /></span>
         </LinkButton>
       </div>
