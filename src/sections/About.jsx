@@ -1,6 +1,7 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { EXPERIENCE_ITEMS } from "../data/experience_items";
 import SectionEyebrow from "../components/SectionEyebrow";
+import SectionHeading from "../components/SectionHeading";
 import Description from "../components/Description";
 import MetaDataRow from "../components/MetaDataRow";
 import LinkButton from "../components/LinkButton";
@@ -39,11 +40,12 @@ export default function AboutSection() {
         <div className="space-y-[2.618rem]">
           <div className="space-y-[1.618rem]">
             <SectionEyebrow label="About" />
-
-            <h2 className="text-[1.418rem] leading-[1.2] text-white/[0.918] md:text-[2.218rem] md:leading-[1] lg:text-[3.236rem]">
+            
+            <SectionHeading>
               Building practical AI agents and full-stack systems that are
               reliable, scalable, and grounded in real-world problems.
-            </h2>
+            </SectionHeading>
+
           </div>
 
           <div className="space-y-[1.618rem] text-white/[0.618]">

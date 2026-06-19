@@ -1,6 +1,7 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { PROJECT_ITEMS } from "../data/projects";
 import SectionEyebrow from "../components/SectionEyebrow";
+import SectionHeading from "../components/SectionHeading";
 import TagList from "../components/TagList";
 import Description from "../components/Description";
 import MetaDataRow from "../components/MetaDataRow";
@@ -39,9 +40,7 @@ export default function ProjectsSection() {
       <div className="mx-auto flex max-w-[68.54rem] flex-col gap-[2.618rem]">
         <div className="space-y-[1.618rem]">
           <SectionEyebrow label="Projects" />
-          <h2 className="max-w-[48rem] text-[1.418rem] leading-[1] text-white/[0.918] md:text-[2.218rem] lg:text-[3.236rem]">
-            My work across AI agents, and full-stack applications.
-          </h2>
+          <SectionHeading className="max-w-[48rem]">My work across AI agents, and full-stack applications.</SectionHeading>
         </div>
 
         <div className="grid gap-[1.618rem] md:grid-cols-2 md:gap-[2.618rem]">
