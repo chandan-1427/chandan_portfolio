@@ -6,7 +6,7 @@ export default function MetaDataRow({ title, value, className="" }) {
       <h3 className={twMerge("text-[1rem] font-medium leading-[1.2] text-white/[0.918]", className)}>
         {title}
       </h3>
-      <span className="w-fit shrink-0 text-[0.76rem] tracking-[0.06em] text-white/[0.618] sm:text-right">
+      <span className={twMerge("w-fit shrink-0 text-[0.76rem] tracking-[0.06em] text-white/[0.618] sm:text-right", className)}>
         {value}
       </span>
     </div>
