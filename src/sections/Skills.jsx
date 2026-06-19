@@ -2,15 +2,14 @@ import { SKILL_GROUPS } from "../data/skills";
 import SectionEyebrow from "../components/SectionEyebrow";
 import TagList from "../components/TagList";
 import Description from "../components/Description";
+import MetaDataRow from "../components/MetaDataRow";
 
 function SkillCard({ title, description, skills }) {
   return (
     <div className="flex flex-col gap-[1.618rem] rounded-[0.5rem] border border-white/[0.146] bg-white/[0.034] p-[1.618rem] backdrop-blur-[4px]">
       <div className="space-y-[0.764rem]">
-        <h3 className="text-[1rem] font-medium leading-[1.2] text-white/[0.918]">
-          {title}
-        </h3>
-        
+        <MetaDataRow title={title} />
+
         <Description desc={description} />
       </div>
  
