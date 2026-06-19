@@ -1,6 +1,7 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { EXPERIENCE_ITEMS } from "../data/experience_items";
 import SectionEyebrow from "../components/SectionEyebrow";
+import Description from "../components/Description";
 
 const ABOUT_PARAGRAPHS = [
   "I'm Dakka Chandan, a full-stack developer and AI engineer from Kadapa, Andhra Pradesh, India. I design and build agents and web applications that are understandable, maintainable, and focused on solving real problems rather than chasing hype.",
@@ -21,9 +22,7 @@ function ExperienceCard({ title, value, description, link, domain }) {
         </span>
       </div>
 
-      <p className="text-[1rem] leading-[1.618] text-white/[0.618]">
-        {description}
-      </p>
+      <Description desc={description} />
 
       <div className="flex justify-end border-t border-white/[0.08] pt-[0.8rem]">
         <a
