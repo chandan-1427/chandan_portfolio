@@ -4,24 +4,7 @@ import SectionEyebrow from "../components/SectionEyebrow";
 import TagList from "../components/TagList";
 import Description from "../components/Description";
 import MetaDataRow from "../components/MetaDataRow";
-
-function LinkButton({ href, variant = "code", children }) {
-  const variants = {
-    live: "bg-white/[0.136] text-white hover:bg-white/[0.226] active:bg-white/[0.146]",
-    code: "bg-white/[0.056] text-white/[0.618] hover:bg-white/[0.126] hover:text-white/80 active:bg-white/[0.146]",
-  };
-
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`w-fit shrink-0 rounded-[0.3rem] border border-white/[0.146] px-[0.764rem] py-[0.382rem] text-[0.75rem] text-white/80 transition-colors duration-300 tracking-wide ${variants[variant]}`}
-    >
-      {children}
-    </a>
-  );
-}
+import LinkButton from "../components/LinkButton";
 
 function ProjectCard({ title, value, description, tech, github, live }) {
   return (
