@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { SOCIALS } from "../data/socials";
 import SectionEyebrow from "../components/SectionEyebrow";
+import Tooltip from "../components/ToolTip";
 
 const EMAIL = "chandandakka@gmail.com";
 
@@ -63,9 +64,7 @@ export default function ContactSection() {
                 >
                   <Icon size={18} />
 
-                  <span className="pointer-events-none absolute left-1/2 top-[-2.4rem] z-30 -translate-x-1/2 whitespace-nowrap tracking-wide rounded-[0.3rem] border border-white/[0.12] bg-[#111111] px-[0.55rem] py-[0.3rem] text-[0.7rem] text-white/[0.75] opacity-0 shadow-lg transition-all duration-200 group-hover:top-[-2.7rem] group-hover:opacity-100">
-                    {label}
-                  </span>
+                  <Tooltip label={label} position="top" />
                 </a>
               ))}
             </div>

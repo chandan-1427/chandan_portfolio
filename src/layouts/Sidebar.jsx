@@ -1,5 +1,6 @@
 import { useCallback } from "react";
 import { scrollTo } from "../lib/scrollTo";
+import Tooltip from "../components/ToolTip";
 
 const LINKS = [
   { id: "hero",     label: "Hero"     },
@@ -23,9 +24,8 @@ function NavButton({ item, variant, onClick }) {
           {item.label.charAt(0)}
         </span>
 
-        <span className="pointer-events-none absolute right-[120%] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-[0.4rem] border border-white/[0.1] bg-[#111111] tracking-wide px-[0.764rem] py-[0.382rem] text-[0.7rem] text-white/[0.78] opacity-0 transition-all duration-300 group-hover:right-[135%] group-hover:opacity-100">
-          {item.label}
-        </span>
+        <Tooltip label={item.label} position="left" />
+
       </button>
     );
   }
