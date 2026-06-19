@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import { cn } from "../lib/cn";
 
 export default function LinkButton({ href, variant = "code", children, className = "" }) {
   const variants = {
@@ -11,7 +11,7 @@ export default function LinkButton({ href, variant = "code", children, className
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={twMerge(
+      className={cn(
         "group relative flex w-fit shrink-0 items-center gap-1 rounded-[0.3rem] border border-white/[0.146] px-[0.764rem] py-[0.382rem] text-[0.75rem] tracking-wide transition-colors duration-300",
         variants[variant],
         className
