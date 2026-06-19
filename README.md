@@ -78,19 +78,25 @@ src/
 
 #### Design Approach
 
-The UI is minimal because I believe less is more. Subtle transparency in theme creates depth without distraction. Spacing, typography, and layout are kept simple to maintain readability across all devices.
+- The UI is minimal because I believe less is more. Subtle transparency in theme creates depth without distraction. Spacing, typography, and layout are kept simple to maintain readability across all devices.
 
-Reusable components are used to keep the code maintainable and consistent. The sidebar navigation and section layouts follow the same patterns throughout the site.
+- Reusable components are used to keep the code maintainable and consistent. The sidebar navigation and section layouts follow the same patterns throughout the site.
 
-Experience, skills, projects, and social links are kept in dedicated data files. This separates portfolio content from the UI and makes updates simpler without changing the section components.
+- Experience, skills, projects, and social links are kept in dedicated data files. This separates portfolio content from the UI and makes updates simpler without changing the section components.
 
-Readability and maintainability were prioritized over complex effects. The animations are subtle and purposeful, enhancing the user experience without overwhelming the content.
+- Readability and maintainability were prioritized over complex effects. The animations are subtle and purposeful, enhancing the user experience without overwhelming the content.
 
 #### What I Learned
 
-Simplicity is harder than adding more features. Small design choices matter more than I initially thought. Reusable components make the code cleaner and easier to maintain. Good UI is often about consistency rather than creativity.
+— Simplicity is harder than adding more features.
 
-AI suggestions should be reviewed carefully instead of copied directly. Sometimes the best solution is the simplest one.
+— Good UI is often about consistency rather than creativity.
+
+— Small design choices matter more than I initially thought.
+
+— Reusable components make the code cleaner and easier to maintain.
+
+*AI suggestions should be reviewed carefully instead of copied directly because sometimes the best solution is the simplest one.*
 
 #### Final Thoughts
 
