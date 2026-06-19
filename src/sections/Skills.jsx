@@ -1,6 +1,7 @@
 import { SKILL_GROUPS } from "../data/skills";
 import SectionEyebrow from "../components/SectionEyebrow";
 import TagList from "../components/TagList";
+import Description from "../components/Description";
 
 function SkillCard({ title, description, skills }) {
   return (
@@ -9,9 +10,8 @@ function SkillCard({ title, description, skills }) {
         <h3 className="text-[1rem] font-medium leading-[1.2] text-white/[0.918]">
           {title}
         </h3>
-        <p className="text-[0.95rem] leading-[1.618] tracking-wide text-white/[0.618]">
-          {description}
-        </p>
+        
+        <Description desc={description} />
       </div>
  
       <TagList tags={skills} />
