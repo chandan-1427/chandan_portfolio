@@ -100,7 +100,7 @@ This is a small project, but it represents my design mindset. I prefer clean and
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/chandan-1427/portfolio_1.git
+   git clone https://github.com/chandan-1427/chandan_portfolio.git
    ```
 2. Move into the project directory:
    ```bash
