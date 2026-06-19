@@ -63,7 +63,6 @@ export default function ContactSection() {
                   className="group relative z-20 flex h-[3.2rem] w-[3.2rem] shrink-0 items-center justify-center rounded-[0.4rem] border border-white/[0.18] bg-white/[0.04] text-white/[0.78] transition-all duration-200 hover:border-white/[0.16] hover:bg-white/[0.08] hover:text-white"
                 >
                   <Icon size={18} />
-
                   <Tooltip label={label} position="top" />
                 </a>
               ))}

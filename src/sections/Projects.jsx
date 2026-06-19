@@ -12,9 +12,7 @@ function ProjectCard({ title, value, description, tech, github, live }) {
   return (
     <Card>
       <MetaDataRow title={title} value={value} />
-
       <Description desc={description} />
-
       <TagList tags={tech} className="gap-[0.618rem]"/>
 
       <div className="flex justify-end gap-[0.764rem] border-t border-white/[0.08] pt-[0.8rem]">

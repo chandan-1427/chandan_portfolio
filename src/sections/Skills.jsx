@@ -11,7 +11,6 @@ function SkillCard({ title, description, skills }) {
     <Card>
       <div className="space-y-[0.764rem]">
         <MetaDataRow title={title} />
-
         <Description desc={description} />
       </div>
  
@@ -26,7 +25,6 @@ export default function SkillsSection() {
       <div className="mx-auto flex max-w-[68.54rem] flex-col gap-[2.618rem]">
         <div className="space-y-[1.618rem]">
           <SectionEyebrow label="Skills" />
-          
           <SectionHeading className="max-w-[48rem]">Skills built through real projects and practical work.</SectionHeading>
         </div>
 

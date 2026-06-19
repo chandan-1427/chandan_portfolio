@@ -12,4 +12,3 @@ export default function MetaDataRow({ title, value = "", className = "" }) {
     </div>
   );
 }
-

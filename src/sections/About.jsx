@@ -18,7 +18,6 @@ function ExperienceCard({ title, value, description, link, domain }) {
   return (
     <Card>
       <MetaDataRow title={title} value={value} />
-
       <Description desc={description} />
 
       <div className="flex justify-end border-t border-white/[0.08] pt-[0.8rem]">
@@ -41,7 +40,6 @@ export default function AboutSection() {
         <div className="space-y-[2.618rem]">
           <div className="space-y-[1.618rem]">
             <SectionEyebrow label="About" />
-
             <SectionHeading>
               Building practical AI agents and full-stack systems that are
               reliable, scalable, and grounded in real-world problems.
