@@ -1,6 +1,7 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { PROJECT_ITEMS } from "../data/projects";
 import SectionEyebrow from "../components/SectionEyebrow";
+import TagList from "../components/TagList";
 
 function LinkButton({ href, variant = "code", children }) {
   const variants = {
@@ -36,16 +37,7 @@ function ProjectCard({ title, value, description, tech, github, live }) {
         {description}
       </p>
 
-      <div className="flex flex-wrap gap-[0.618rem]">
-        {tech.map((t) => (
-          <span
-            key={t}
-            className="rounded-[0.3rem] border border-white/[0.146] bg-white/[0.056] px-[0.764rem] py-[0.382rem] text-[0.75rem] text-white/[0.618] tracking-wide"
-          >
-            {t}
-          </span>
-        ))}
-      </div>
+      <TagList tags={tech} className="gap-[0.618rem]"/>
 
       <div className="flex justify-end gap-[0.764rem] border-t border-white/[0.08] pt-[0.8rem]">
         {live && (
