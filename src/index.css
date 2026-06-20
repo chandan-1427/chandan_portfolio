@@ -20,6 +20,7 @@
   }
 
   html {
+    scrollbar-gutter: stable;
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbar-thumb) var(--color-bg);
   }
