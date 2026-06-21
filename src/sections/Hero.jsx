@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiOutlineDocumentText } from "react-icons/hi";
+import Tooltip from "../components/ToolTip";
 
 const NAME = "CHANDAN";
 const LETTERS = NAME.split("");
@@ -73,9 +74,7 @@ export default function HeroSection() {
             <HiOutlineDocumentText size={14} />
             Resume
 
-            <span className="pointer-events-none absolute left-1/2 top-[-2.2rem] z-20 -translate-x-1/2 whitespace-nowrap rounded-[0.3rem] border border-white/[0.12] bg-[#111111] px-[0.55rem] py-[0.3rem] text-[0.7rem] text-white/[0.75] opacity-0 shadow-lg transition-all duration-200 group-hover:top-[-2.5rem] group-hover:opacity-100">
-              View PDF
-            </span>
+            <Tooltip label="View PDF" position="top-compact" />
           </a>
         </div>
       </div>
