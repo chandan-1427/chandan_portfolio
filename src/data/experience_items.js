@@ -11,7 +11,7 @@ export const EXPERIENCE_ITEMS = [
     title: "Open Source",
     value: "Feb 2026 – Present",
     description:
-      "Contributed to public projects, collaborated on existing codebases, reviewed code, and followed community standards. Proud to say I have contributed to projects like Bindu and Agno. Best decision I took for industry exposure and learning.",
+      "Contributed to public projects, collaborated on existing codebases, reviewed code, and followed community standards. Proud to say I have contributed to projects like Bindu, Hatchet.run and Agno. Best decision I took for industry exposure and learning.",
     link: "https://github.com/chandan-1427?tab=repositories",
     domain: "github.com",
   },
