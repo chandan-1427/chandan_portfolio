@@ -45,7 +45,7 @@ export default function ContactSection() {
                   onClick={handleCopy}
                   className={`shrink-0 rounded-md border px-3 py-1.5 text-xs tracking-wide transition-all duration-200
                     ${copied
-                      ? "border-white/[0.14] bg-white/[0.08] text-white/90 shadow-none"
+                      ? "border-white/[0.14] bg-white/[0.06] text-white/70 shadow-none"
                       : "border-white/[0.08] bg-white/[0.04] text-white/50 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_4px_8px_-2px_rgba(0,0,0,0.2)] hover:border-white/[0.12] hover:bg-white/[0.07] hover:text-white/70 active:shadow-none"
                     }`}
                 >
