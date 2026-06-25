@@ -20,7 +20,7 @@ function ExperienceCard({ title, value, description, link, domain }) {
       <MetaDataRow title={title} value={value} />
       <Description desc={description} />
 
-      <div className="flex justify-end border-t border-white/[0.08] pt-[0.8rem]">
+      <div className="mt-auto flex justify-end border-t border-white/[0.08] pt-[0.8rem]">
         <LinkButton href={link}>
           <span>{domain}</span>
           <IoIosArrowForward />

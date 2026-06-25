@@ -15,7 +15,7 @@ function ProjectCard({ title, value, description, tech, github, live }) {
       <Description desc={description} />
       <TagList tags={tech} className="gap-[0.618rem]"/>
 
-      <div className="flex justify-end gap-[0.764rem] border-t border-white/[0.08] pt-[0.8rem]">
+      <div className="mt-auto flex justify-end gap-[0.764rem] border-t border-white/[0.08] pt-[0.8rem]">
         {live && (
           <LinkButton href={live} variant="live">
             <span className="flex items-center gap-1"> Live <IoIosArrowForward /></span>
