@@ -4,7 +4,7 @@ export default function SectionHeading({ children, className = "" }) {
   return (
     <h2
       className={cn(
-        "text-[1.418rem] leading-[1.2] text-white/[0.918] md:text-[2.218rem] md:leading-[1] lg:text-[3.236rem]",
+        "text-2xl leading-tight tracking-tight text-white/90 md:text-4xl lg:text-5xl",
         className
       )}
     >
