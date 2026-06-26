@@ -49,7 +49,7 @@ export default function AboutSection() {
 
           <div className="space-y-[1.618rem] text-white/[0.618]">
             {ABOUT_PARAGRAPHS.map((paragraph) => (
-              <p key={paragraph.slice(0, 24)} className="text-[1.08rem] leading-[1.618]">
+              <p key={paragraph.slice(0, 24)} className="text-[1.06rem] leading-[1.618]">
                 {paragraph}
               </p>
             ))}

@@ -31,12 +31,12 @@ export default function ContactSection() {
 
             {/* Email column */}
             <div className="flex flex-col gap-3 p-6">
-              <span className="text-[0.65rem] uppercase tracking-widest text-white/30">
+              <span className="text-[0.65rem] uppercase tracking-widest text-white/50">
                 Email
               </span>
 
               <div className="flex items-center justify-between gap-3">
-                <p className="text-[0.925rem] tracking-wide text-white/80">
+                <p className="text-[0.925rem] tracking-wide text-white/90">
                   {EMAIL}
                 </p>
 
@@ -59,7 +59,7 @@ export default function ContactSection() {
 
             {/* Socials column */}
             <div className="flex flex-col gap-3 p-6">
-              <span className="text-[0.65rem] uppercase tracking-widest text-white/30">
+              <span className="text-[0.65rem] uppercase tracking-widest text-white/50">
                 Socials
               </span>
 

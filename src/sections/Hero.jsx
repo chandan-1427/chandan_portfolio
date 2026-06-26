@@ -56,7 +56,7 @@ export default function HeroSection() {
           </h1>
 
           <p
-            className="mt-5 uppercase max-w-[90%] text-sm font-light tracking-[0.08em] text-white/50 sm:mt-6 md:max-w-2xl md:text-base"
+            className="mt-5 uppercase max-w-[90%] text-sm font-light tracking-[0.10em] text-white/70 sm:mt-6 md:max-w-2xl md:text-"
             style={entrance(LETTERS.length * 80 + 200)}
           >
             {TAGLINE}
@@ -66,7 +66,7 @@ export default function HeroSection() {
             href="/chandan.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative mt-8 flex w-fit shrink-0 items-center gap-1.5 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-xs tracking-wide text-white/50 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_4px_8px_-2px_rgba(0,0,0,0.2)] transition-colors duration-200 hover:border-white/[0.12] hover:bg-white/[0.07] hover:text-white/70 active:bg-white/[0.03] active:shadow-none sm:mt-10"
+            className="group relative mt-8 flex w-fit shrink-0 items-center gap-1.5 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-xs tracking-wide text-white/70 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_4px_8px_-2px_rgba(0,0,0,0.2)] transition-colors duration-200 hover:border-white/[0.12] hover:bg-white/[0.07] hover:text-white/70 active:bg-white/[0.03] active:shadow-none sm:mt-10"
             style={{
               ...entrance(LETTERS.length * 80 + 500),
               transition: "opacity 700ms ease-out, transform 700ms ease-out, background-color 300ms ease, color 300ms ease, box-shadow 300ms ease",

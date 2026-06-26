@@ -10,7 +10,7 @@ export default function Tooltip({ label, position = "top", className = "" }) {
   return (
     <span
       className={cn(
-        "pointer-events-none absolute z-30 whitespace-nowrap rounded-md border border-white/[0.08] bg-[#1a1a1a] px-2.5 py-1 text-[0.7rem] tracking-wide text-white/70 opacity-0 shadow-[0_5px_6px_-2px_rgba(0,0,0,0.4)] transition-all group-hover:opacity-100",
+        "pointer-events-none absolute z-30 whitespace-nowrap rounded-md border border-white/[0.08] bg-[#1a1a1a] px-2.5 py-1 text-[0.7rem] tracking-wide text-white/80 opacity-0 shadow-[0_5px_6px_-2px_rgba(0,0,0,0.4)] transition-all group-hover:opacity-100",
         positions[position],
         className
       )}
