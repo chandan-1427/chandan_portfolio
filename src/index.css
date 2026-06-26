@@ -14,7 +14,7 @@
 
 @layer base {
   :root {
-    --color-bg:             #1F1F1E;
+    --color-bg:             #1c1c1c;
     --scrollbar-thumb:      rgba(255, 255, 255, 0.18);
     --scrollbar-thumb-hover: rgba(255, 255, 255, 0.28);
   }
