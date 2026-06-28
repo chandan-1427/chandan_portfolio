@@ -18,7 +18,9 @@ export default function ContactSection() {
     try {
       await navigator.clipboard.writeText(EMAIL);
       setCopied(true);
-    } catch {}
+    } catch {
+      // Silently fail
+    }
   };
 
   return (
