@@ -1,9 +1,9 @@
 export const EXPERIENCE_ITEMS = [
   {
-    title: "Bindu Org",
+    title: "Bindu",
     value: "March 2026 – May 2026",
     description:
-      "Built and refined AI agents across different problem domains with a focus on practical real-world use cases. Tested and iterated on agent architectures, tools, and workflows to improve reliability and observability. Contributed to docs and repo maintenance.",
+      "One of two engineers on the team, which meant owning problems end-to-end with no one else to hand them to. Built the Mail Agent, an email-driven HR triage system that parses job applications, scores them against configurable requirements, and routes edge cases to a human via Slack. Also fixed database-layer bugs in the core platform.",
     link: "https://getbindu.com/",
     domain: "getbindu.com",
   },
@@ -11,7 +11,7 @@ export const EXPERIENCE_ITEMS = [
     title: "Open Source",
     value: "Feb 2026 – Present",
     description:
-      "Contributed to public projects, collaborated on existing codebases, reviewed code, and followed community standards. Proud to say I have contributed to projects like Bindu, Hatchet.run and Agno. Best decision I took for industry exposure and learning.",
+      "Fixed database bugs in Bindu's core platform, updated Agno's documentation to cover Bindu integration, and have been picking off smaller bug fixes in Hatchet.run. Less about any single contribution and more a habit of reading other people's code closely enough to find what's actually broken.",
     link: "https://github.com/chandan-1427?tab=repositories",
     domain: "github.com",
   },
@@ -19,15 +19,15 @@ export const EXPERIENCE_ITEMS = [
     title: "Rooman Technologies",
     value: "Feb 2025 – June 2025",
     description:
-      "Worked as an Application Developer Intern, improved development fundamentals through projects and hands-on learning.",
+      "Application Developer Intern — my first real exposure to building software in a structured setting rather than self-taught from tutorials alone.",
     link: "https://rooman.net/",
     domain: "rooman.net",
   },
   {
-    title: "Full-Stack Development",
+    title: "Independent Projects",
     value: "July 2025 – Jan 2026",
     description:
-      "Built end-to-end web applications across frontend, backend, APIs, authentication, and databases using TypeScript, React, Node.js, Hono, PostgreSQL, and ORMs like Prisma.",
+      "Built and deployed full-stack applications solo — frontend, backend, database, and auth — using TypeScript, React, Hono, PostgreSQL, and Prisma. Treated each project as a chance to make a real architectural decision rather than follow a tutorial's defaults.",
     link: "https://github.com/chandan-1427?tab=repositories",
     domain: "github.com",
   },
