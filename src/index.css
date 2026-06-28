@@ -52,12 +52,20 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2 {
+  h1 {
     font-family: var(--font-geist);
   }
 
   ::selection {
     background: rgba(255, 255, 255, 0.12);
     color: rgba(255, 255, 255, 0.98);
+  }
+
+  .text-neon {
+    color: #EBEBEB;
+  }
+
+  .text-data {
+    color: #E3E3E3;
   }
 }

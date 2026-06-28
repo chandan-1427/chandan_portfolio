@@ -9,7 +9,7 @@ export default function Footer() {
         onClick={() => scrollTo("hero")}
         className="group cursor-pointer select-none"
       >
-        <span className="font-stalemate text-6xl tracking-wide text-white/20 transition-all duration-500 group-hover:text-white/50 active:text-white/70 md:text-8xl lg:text-9xl inline-block">
+        <span className="font-stalemate text-6xl tracking-wide text-white/20 transition-all duration-500 group-hover:text-white/60 active:text-white/70 md:text-8xl lg:text-9xl inline-block">
           Chandan
         </span>
       </button>

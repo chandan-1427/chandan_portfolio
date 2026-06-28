@@ -36,17 +36,17 @@ export default function ContactSection() {
               </span>
 
               <div className="flex items-center justify-between gap-3">
-                <p className="text-[0.925rem] tracking-wide text-white/90">
+                <p className="text-[0.925rem] tracking-wide text-data">
                   {EMAIL}
                 </p>
 
                 <button
                   type="button"
                   onClick={handleCopy}
-                  className={`shrink-0 rounded-md border px-3 py-1.5 text-xs tracking-wide transition-all duration-200
+                  className={`shrink-0 rounded-md border text-white/70 px-3 py-1.5 text-xs tracking-wide transition-all duration-200
                     ${copied
-                      ? "border-white/[0.14] bg-white/[0.06] text-white/70 shadow-none"
-                      : "border-white/[0.08] bg-white/[0.04] text-white/50 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_4px_8px_-2px_rgba(0,0,0,0.2)] hover:border-white/[0.12] hover:bg-white/[0.07] hover:text-white/70 active:shadow-none"
+                      ? "border-white/[0.14] bg-white/[0.06] shadow-none"
+                      : "border-white/[0.08] bg-white/[0.04] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_4px_8px_-2px_rgba(0,0,0,0.2)] hover:border-white/[0.12] hover:bg-white/[0.07] hover:text-white/70 active:shadow-none"
                     }`}
                 >
                   {copied ? "Copied!" : "Copy"}
@@ -71,7 +71,7 @@ export default function ContactSection() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={label}
-                    className="group relative flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.04] text-white/50 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] transition-all duration-200 hover:border-white/[0.14] hover:bg-white/[0.08] hover:text-white/90 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_4px_8px_-2px_rgba(0,0,0,0.2)] active:shadow-none"
+                    className="group relative flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.04] text-white/70 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] transition-all duration-200 hover:border-white/[0.14] hover:bg-white/[0.08] hover:text-white/90 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_4px_8px_-2px_rgba(0,0,0,0.2)] active:shadow-none"
                   >
                     <Icon size={16} />
                     <Tooltip label={label} position="top" />
