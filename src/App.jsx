@@ -2,13 +2,13 @@ import { lazy, Suspense, useEffect } from "react";
 import Lenis from "lenis";
 
 import Sidebar from "./layouts/Sidebar";
-import Footer from "./layouts/Footer";
 
 const HeroSection    = lazy(() => import("./sections/Hero"));
 const AboutSection   = lazy(() => import("./sections/About"));
 const SkillsSection  = lazy(() => import("./sections/Skills"));
 const ProjectsSection = lazy(() => import("./sections/Projects"));
 const ContactSection = lazy(() => import("./sections/Contact"));
+const Footer = lazy(() => import("./layouts/Footer"));
 
 export default function App() {
   useEffect(() => {
