@@ -25,7 +25,7 @@ export default function SkillsSection() {
       <div className="mx-auto flex max-w-[68.54rem] flex-col gap-[2.618rem]">
         <div className="space-y-[1.618rem]">
           <SectionEyebrow label="Skills" />
-          <SectionHeading className="max-w-[48rem]">Skills built through real projects and practical work.</SectionHeading>
+          <SectionHeading>Skills built through real projects and practical work.</SectionHeading>
         </div>
 
         <div className="grid gap-[1.618rem] md:grid-cols-2 md:gap-[2.618rem]">

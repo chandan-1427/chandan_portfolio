@@ -39,7 +39,7 @@ export default function ProjectsSection() {
       <div className="mx-auto flex max-w-[68.54rem] flex-col gap-[2.618rem]">
         <div className="space-y-[1.618rem]">
           <SectionEyebrow label="Projects" />
-          <SectionHeading className="max-w-[48rem]">My work across AI agents, and full-stack applications.</SectionHeading>
+          <SectionHeading>My work across AI agents, and full-stack applications.</SectionHeading>
         </div>
 
         <div className="grid gap-[1.618rem] md:grid-cols-2 md:gap-[2.618rem]">
