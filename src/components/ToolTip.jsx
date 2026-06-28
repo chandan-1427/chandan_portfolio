@@ -3,6 +3,7 @@ import { cn } from "../lib/cn";
 const positions = {
   top: "left-1/2 top-[-2.4rem] -translate-x-1/2 group-hover:top-[-2.7rem] duration-200",
   left: "right-[120%] top-1/2 -translate-y-1/2 group-hover:right-[135%] duration-300",
+  right: "left-[120%] top-1/2 -translate-y-1/2 group-hover:left-[100%] duration-300",
   "top-compact": "left-1/2 top-[-2.2rem] z-20 -translate-x-1/2 group-hover:top-[-2.5rem] duration-200",
 };
 
