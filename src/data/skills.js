@@ -1,22 +1,22 @@
 export const SKILL_GROUPS = [
   {
     title: "Frontend",
-    description: "Clean, minimal, intentional design with long-term maintainability in mind.",
-    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "API management", "State management", "Framer Motion"],
+    description: "Comfortable across the stack from layout to state — picks the simplest tool that fits, not the trendiest one.",
+    skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Framer Motion"],
   },
   {
     title: "Backend",
-    description: "Scalable systems built with modular complexity while considering production environments.",
+    description: "APIs and data layers built to survive real failure conditions, not just the happy path.",
     skills: ["Node.js", "Express.js", "Hono", "REST APIs", "JWT", "PostgreSQL", "MongoDB", "Prisma ORM", "Drizzle ORM"],
   },
   {
     title: "AI & Agents",
-    description: "Rapid-changing environment — new tech every day.",
-    skills: ["Agno", "RAG", "LangChain", "System design", "Tool design", "Retrieval systems", "Security", "Reliability engineering", "Evaluation & Observation", "Skill building"],
+    description: "Currently focused on agent architecture and tool design — fast-moving space, learning in public.",
+    skills: ["Agno", "LangChain", "Tool design", "Agent architecture", "Pydantic"],
   },
   {
     title: "Tools & Workflow",
-    description: "Tasks done right with the right tools.",
-    skills: ["Git", "GitHub", "Docker", "Vercel", "Render", "Resend", "Cloudflare", "Postman", "VS Code", "pgAdmin", "AgentMail", "LangSmith", "Pydantic", "ElevenLabs"],
+    description: "The infrastructure around the code — deployment, debugging, and the services that make a project real.",
+    skills: ["Git", "GitHub", "Docker", "Vercel", "Render", "Cloudflare", "Postman", "pgAdmin", "AgentMail", "LangSmith", "Resend",],
   },
 ];
