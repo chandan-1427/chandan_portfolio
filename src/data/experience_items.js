@@ -11,7 +11,7 @@ export const EXPERIENCE_ITEMS = [
     title: "Open Source",
     value: "Feb 2026 – Present",
     description:
-      "Fixed database bugs in Bindu's core platform, updated Agno's documentation to cover Bindu integration, and have been picking off smaller bug fixes in Hatchet.run. Less about any single contribution and more a habit of reading other people's code closely enough to find what's actually broken.",
+      "Fixed database bugs in Bindu's core platform, updated AG2(AutoGen)'s documentation to cover Bindu integration, and have been picking off smaller bug fixes in Hatchet.run. Less about any single contribution and more a habit of reading other people's code closely enough to find what's actually broken.",
     link: "https://github.com/chandan-1427?tab=repositories",
     domain: "github.com",
   },
