@@ -35,7 +35,7 @@ export default function Footer() {
           onClick={() => scrollTo("hero")}
           className="group relative cursor-pointer select-none"
         >
-          <span className="font-stalemate text-6xl tracking-wide text-white/50 transition-all duration-500 group-hover:text-[#E6E6E6] active:text-[#EBEBEB] md:text-7xl lg:text-8xl inline-block">
+          <span className="font-stalemate text-5xl tracking-wide text-white/50 transition-all duration-500 group-hover:text-[#E6E6E6] active:text-[#EBEBEB] md:text-6xl lg:text-7xl inline-block">
             Chandan.
           </span>
           <Tooltip label={label} position="right" />
