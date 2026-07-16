@@ -1,5 +1,13 @@
 export const EXPERIENCE_ITEMS = [
   {
+    title: "Abstrabit Technologies",
+    value: "July 2026 – Present",
+    description:
+      "Software Engineer Intern, remote. Working primarily on the frontend, with direct involvement in client meetings and feedback cycles — iterating quickly based on real client input rather than working from a fixed spec.",
+    link: "https://www.abstrabit.com/",
+    domain: "abstrabit.com",
+  },
+  {
     title: "Bindu",
     value: "March 2026 – May 2026",
     description:
