@@ -51,7 +51,7 @@ export default function AboutSection() {
         </div>
 
         <div className="space-y-[2.618rem]">
-          <SectionEyebrow label="Experience" className="text-[0.758rem] text-white/[0.582]" />
+          <SectionEyebrow label="Experience" />
           
           <div className="grid gap-[1.618rem] md:grid-cols-2 md:gap-[2.618rem]">
             {EXPERIENCE_ITEMS.map((item) => (
