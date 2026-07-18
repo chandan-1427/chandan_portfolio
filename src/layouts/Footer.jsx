@@ -9,7 +9,7 @@ export default function Footer() {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <footer className="flex min-h-screen flex-col items-center justify-center pb-8 md:pb-16 bg-[#131313] rounded-2xl ml-2">
+    <footer className="flex min-h-screen flex-col items-center justify-center pb-8 md:pb-16 bg-[#131313] rounded-2xl">
 
       <div className="flex flex-col items-center gap-6 md:flex-row md:items-end md:gap-8">
 
