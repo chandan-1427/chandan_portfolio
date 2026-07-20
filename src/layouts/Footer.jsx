@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { scrollTo } from "../lib/scrollTo";
-import MyImage from "../assets/blue-me.png";
-import Tooltip from "../components/ui/ToolTip";
+import { scrollTo } from "@/lib/scrollTo";
+import MyImage from "@/assets/blue-me.png";
+import Tooltip from "@/components/ui/ToolTip";
 
 const label = "Back to Top";
 

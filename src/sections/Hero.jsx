@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { HiOutlineDocumentText } from "react-icons/hi";
-import Tooltip from "../components/ui/ToolTip";
+import Tooltip from "@/components/ui/ToolTip";
 
 const NAME = "CHANDAN";
 const LETTERS = NAME.split("");

@@ -1,4 +1,4 @@
-import { cn } from "../../lib/cn";
+import { cn } from "@/lib/cn";
 
 const positions = {
   top: "left-1/2 top-[-2.4rem] -translate-x-1/2 group-hover:top-[-2.7rem] duration-200",
