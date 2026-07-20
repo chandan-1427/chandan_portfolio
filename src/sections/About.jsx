@@ -1,11 +1,11 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { EXPERIENCE_ITEMS } from "../data/experience_items";
-import SectionEyebrow from "../components/SectionEyebrow";
-import SectionHeading from "../components/SectionHeading";
-import Card from "../components/Card";
-import Description from "../components/Description";
-import MetaDataRow from "../components/MetaDataRow";
-import LinkButton from "../components/LinkButton";
+import SectionEyebrow from "../components/layout/SectionEyebrow";
+import SectionHeading from "../components/layout/SectionHeading";
+import Card from "../components/content/Card";
+import Description from "../components/content/Description";
+import MetaDataRow from "../components/content/MetaDataRow";
+import LinkButton from "../components/ui/LinkButton";
 import { ABOUT_PARAGRAPHS } from "../data/about_paragraphs";
 
 function ExperienceCard({ title, value, description, link, domain }) {

@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { scrollTo } from "../lib/scrollTo";
-import Tooltip from "../components/ToolTip";
+import Tooltip from "../components/ui/ToolTip";
 
 const LINKS = [
   { id: "hero",     label: "Hero"     },

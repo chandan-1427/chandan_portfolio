@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { SOCIALS } from "../data/socials";
-import SectionEyebrow from "../components/SectionEyebrow";
-import Tooltip from "../components/ToolTip";
+import SectionEyebrow from "../components/layout/SectionEyebrow";
+import Tooltip from "../components/ui/ToolTip";
 
 const EMAIL = "chandandakka@gmail.com";
 

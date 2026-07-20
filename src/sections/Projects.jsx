@@ -1,12 +1,12 @@
 import { IoIosArrowForward } from "react-icons/io";
 import { PROJECT_ITEMS } from "../data/projects";
-import SectionEyebrow from "../components/SectionEyebrow";
-import SectionHeading from "../components/SectionHeading";
-import Card from "../components/Card";
-import TagList from "../components/TagList";
-import Description from "../components/Description";
-import MetaDataRow from "../components/MetaDataRow";
-import LinkButton from "../components/LinkButton";
+import SectionEyebrow from "../components/layout/SectionEyebrow";
+import SectionHeading from "../components/layout/SectionHeading";
+import Card from "../components/content/Card";
+import TagList from "../components/ui/TagList";
+import Description from "../components/content/Description";
+import MetaDataRow from "../components/content/MetaDataRow";
+import LinkButton from "../components/ui/LinkButton";
 
 function ProjectCard({ title, value, description, tech, github, live }) {
   return (

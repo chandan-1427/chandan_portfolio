@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useState } from "react";
 import Lenis from "lenis";
 
 import Sidebar from "./layouts/Sidebar";
-import DotGridLoader from "./components/DotGridLoader";
+import DotGridLoader from "./components/layout/DotGridLoader";
 
 const HeroSection     = lazy(() => import("./sections/Hero"));
 const AboutSection    = lazy(() => import("./sections/About"));
