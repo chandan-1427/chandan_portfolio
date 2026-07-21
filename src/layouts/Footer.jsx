@@ -9,10 +9,8 @@ export default function Footer() {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <footer className="flex min-h-screen flex-col items-center justify-center pb-8 md:pb-16 bg-[#131313] rounded-2xl">
-
+    <footer className="flex min-h-screen flex-col items-center justify-center pb-8 md:pb-16 bg-gradient-to-t from-[#B85A0D] from-0% via-[#5A3410] via-60% to-[#1B1A19] to-100% rounded-2xl">
       <div className="flex flex-col items-center gap-6 md:flex-row md:items-end md:gap-8">
-
         {/* Image with reserved space — no layout shift */}
         <div className="relative h-64 w-64 shrink-0 rounded-2xl md:h-80 md:w-80 lg:h-96 lg:w-96">
           {!loaded && (
@@ -35,14 +33,12 @@ export default function Footer() {
           onClick={() => scrollTo("hero")}
           className="group relative cursor-pointer select-none"
         >
-          <span className="font-stalemate text-5xl tracking-wide text-white/80 transition-all duration-500 group-hover:text-white/60 active:text-[#EBEBEB] md:text-6xl lg:text-7xl inline-block">
+          <span className="font-stalemate text-5xl tracking-wide text-white transition-all duration-500 group-hover:text-white/70 active:text-[#EBEBEB] md:text-6xl lg:text-7xl inline-block">
             Chandan.
           </span>
           <Tooltip label={label} position="right" />
         </button>
-
       </div>
-
     </footer>
   );
 }
