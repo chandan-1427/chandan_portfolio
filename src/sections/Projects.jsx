@@ -18,7 +18,7 @@ function ProjectCard({ title, value, description, tech, github, live, defaultOpe
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex w-full items-center gap-3 text-left md:pointer-events-none"
+        className="flex w-full items-center gap-3 text-left transition-transform duration-100 active:scale-[0.96] md:pointer-events-none md:active:scale-100"
       >
         <div className="flex-1">
           <MetaDataRow title={title} value={value} />
