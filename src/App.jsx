@@ -35,10 +35,21 @@ export default function App() {
       ? document.fonts.ready
       : Promise.resolve();
 
+    // Wait for the lazy section chunks so Suspense won't still be showing
+    // its (blank) fallback once the loader has faded out
+    const contentReady = Promise.all([
+      import("./sections/Hero"),
+      import("./sections/About"),
+      import("./sections/Skills"),
+      import("./sections/Projects"),
+      import("./sections/Contact"),
+      import("./layouts/Footer"),
+    ]);
+
     // Small minimum duration so the loader doesn't flash for 1 frame
     const minDelay = new Promise((resolve) => setTimeout(resolve, 400));
 
-    Promise.all([fontsReady, minDelay]).then(() => setReady(true));
+    Promise.all([fontsReady, contentReady, minDelay]).then(() => setReady(true));
   }, []);
 
   return (

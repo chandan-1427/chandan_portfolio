@@ -1,12 +1,36 @@
 import { useEffect, useState } from "react";
+import { motion, useReducedMotion } from "motion/react";
 import { SOCIALS } from "@/data/socials";
 import SectionEyebrow from "@/components/layout/SectionEyebrow";
 import Tooltip from "@/components/ui/ToolTip";
+import { useHover } from "@/lib/useHover";
 
 const EMAIL = "chandandakka@gmail.com";
 
+function SocialLink({ label, href, icon: Icon }) {
+  const [hovered, hoverProps] = useHover();
+  const shouldReduceMotion = useReducedMotion();
+
+  return (
+    <motion.a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={label}
+      className="group relative flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.04] text-white/90 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] transition-[color,background-color,border-color,box-shadow] duration-200 hover:border-white/[0.14] hover:bg-white/[0.08] hover:text-white/90 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_4px_8px_-2px_rgba(0,0,0,0.2)] active:shadow-none"
+      whileHover={shouldReduceMotion ? undefined : { scale: 1.19, transition: { duration: 0.25, ease: "easeOut" } }}
+      whileTap={shouldReduceMotion ? undefined : { scale: 0.9, transition: { duration: 0.15, ease: "easeOut" } }}
+      {...hoverProps}
+    >
+      <Icon size={16} />
+      <Tooltip label={label} position="top" visible={hovered} />
+    </motion.a>
+  );
+}
+
 export default function ContactSection() {
   const [copyStatus, setCopyStatus] = useState("idle");
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     if (copyStatus === "idle") return;
@@ -28,8 +52,8 @@ export default function ContactSection() {
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col gap-10">
         <SectionEyebrow label="Contact" />
 
-        <div className="rounded-lg border border-white/[0.08] bg-white/[0.02] backdrop-blur-md shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_8px_16px_-4px_rgba(0,0,0,0.25)] overflow-hidden">
-          <div className="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-white/[0.06]">
+        <div className="rounded-lg border border-white/[0.20] bg-white/[0.02] backdrop-blur-md overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:divide-x md:divide-white/[0.20]">
 
             {/* Email column */}
             <div className="flex flex-col gap-3 p-6">
@@ -38,21 +62,23 @@ export default function ContactSection() {
               </span>
 
               <div className="flex items-center justify-between gap-3">
-                <p className="text-[0.925rem] tracking-wide text-data">
+                <p className="text-[0.925rem] tracking-wide text-white/90">
                   {EMAIL}
                 </p>
 
-                <button
+                <motion.button
                   type="button"
                   onClick={handleCopy}
-                  className={`shrink-0 rounded-md border text-white/70 px-3 py-1.5 text-xs tracking-wide transition-[background-color,border-color,box-shadow,scale] duration-200 active:scale-[0.96]
+                  className={`shrink-0 rounded-md border text-white/90 px-3 py-1.5 text-xs tracking-wide transition-[background-color,border-color,box-shadow] duration-200 cursor-pointer
                     ${copyStatus !== "idle"
                       ? "border-white/[0.14] bg-white/[0.06] shadow-none"
-                      : "border-white/[0.08] bg-white/[0.04] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_4px_8px_-2px_rgba(0,0,0,0.2)] hover:border-white/[0.12] hover:bg-white/[0.07] hover:text-white/70 active:shadow-none"
+                      : "border-white/[0.08] bg-white/[0.04] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_4px_8px_-2px_rgba(0,0,0,0.2)] hover:border-white/[0.12] hover:bg-white/[0.07] hover:text-white/80 active:shadow-none"
                     }`}
+                  whileHover={shouldReduceMotion ? undefined : { scale: 1.02, transition: { duration: 0.25, ease: "easeOut" } }}
+                  whileTap={shouldReduceMotion ? undefined : { scale: 0.9, transition: { duration: 0.15, ease: "easeOut" } }}
                 >
                   {copyStatus === "copied" ? "Copied!" : copyStatus === "failed" ? "Copy failed — try again" : "Copy"}
-                </button>
+                </motion.button>
               </div>
             </div>
 
@@ -66,18 +92,8 @@ export default function ContactSection() {
               </span>
 
               <div className="flex flex-wrap gap-2">
-                {SOCIALS.map(({ label, href, icon: Icon }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={label}
-                    className="group relative flex h-10 w-10 shrink-0 items-center justify-center rounded-md border border-white/[0.08] bg-white/[0.04] text-white/70 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] transition-[color,background-color,border-color,box-shadow,scale] duration-200 hover:border-white/[0.14] hover:bg-white/[0.08] hover:text-white/90 hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_4px_8px_-2px_rgba(0,0,0,0.2)] active:scale-[0.96] active:shadow-none"
-                  >
-                    <Icon size={16} />
-                    <Tooltip label={label} position="top" />
-                  </a>
+                {SOCIALS.map((social) => (
+                  <SocialLink key={social.label} {...social} />
                 ))}
               </div>
             </div>

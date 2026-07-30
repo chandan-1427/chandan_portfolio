@@ -41,11 +41,13 @@ export default function AboutSection() {
 
           </div>
 
-          <div className="space-y-[1.618rem] text-white/[0.618]">
+          <div className="space-y-[1.618rem] bg-pink-900 py-5 px-5 rounded-[25px]">
             {ABOUT_PARAGRAPHS.map((paragraph) => (
-              <p key={paragraph.slice(0, 24)} className="text-[1.06rem] leading-[1.618]">
-                {paragraph}
-              </p>
+              <Description
+                key={paragraph.slice(0, 24)}
+                desc={paragraph}
+                className="text-[1.06rem] leading-[1.618] text-white/80"
+              />
             ))}
           </div>
         </div>

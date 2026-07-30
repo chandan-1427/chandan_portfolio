@@ -1,7 +1,10 @@
+import { motion, useReducedMotion } from "motion/react";
+
 export default function DotGridLoader({ visible }) {
-  const cols = 6;
-  const rows = 6;
+  const cols = 20;
+  const rows = 14;
   const dots = Array.from({ length: cols * rows });
+  const shouldReduceMotion = useReducedMotion();
 
   return (
     <div
@@ -11,36 +14,39 @@ export default function DotGridLoader({ visible }) {
       }`}
       style={{ backgroundColor: "var(--color-bg)" }}
     >
-      <div
-        className="grid gap-2.5"
-        style={{ gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))` }}
-      >
-        {dots.map((_, i) => {
-          const col = i % cols;
-          const row = Math.floor(i / cols);
-          const delay = (col + row) * 0.06;
-          return (
-            <span
-              key={i}
-              className="block h-1.5 w-1.5 rounded-full animate-dotPulse will-change-transform"
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.918)",
-                animationDelay: `${delay}s`,
-              }}
-            />
-          );
-        })}
-      </div>
-
-      <style>{`
-        @keyframes dotPulse {
-          0%, 100% { transform: scale(0.35); opacity: 0.2; }
-          50% { transform: scale(1); opacity: 1; }
-        }
-        .animate-dotPulse {
-          animation: dotPulse 1.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-        }
-      `}</style>
+      {visible && (
+        <div
+          className="grid h-[95vh] w-[95vw] place-items-center rounded-3xl"
+          style={{
+            gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
+            gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`,
+          }}
+        >
+          {dots.map((_, i) => {
+            const col = i % cols;
+            const row = Math.floor(i / cols);
+            const delay = (col + row) * 0.06;
+            return (
+              <motion.span
+                key={i}
+                className="block h-1 w-1 rounded-full will-change-transform"
+                style={{ backgroundColor: "rgba(255, 255, 255, 0.918)" }}
+                animate={
+                  shouldReduceMotion
+                    ? { scale: 1, opacity: 1 }
+                    : { scale: [0.35, 1, 0.35], opacity: [0.2, 1, 0.2] }
+                }
+                transition={{
+                  duration: 1.4,
+                  ease: [0.45, 0, 0.55, 1],
+                  repeat: shouldReduceMotion ? 0 : Infinity,
+                  delay,
+                }}
+              />
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
