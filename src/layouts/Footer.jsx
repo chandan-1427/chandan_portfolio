@@ -3,7 +3,7 @@ import { scrollTo } from "@/lib/scrollTo";
 import MyImage from "@/assets/blue-me.png";
 import Tooltip from "@/components/ui/ToolTip";
 
-const label = "Back to Top";
+const label = "Back to top";
 
 export default function Footer() {
   const [loaded, setLoaded] = useState(false);

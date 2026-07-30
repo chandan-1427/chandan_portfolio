@@ -73,7 +73,7 @@ export default function HeroSection() {
             }}
           >
             <HiOutlineDocumentText size={14} />
-            Resume
+            View resume
             <Tooltip label="View PDF" position="top-compact" />
           </a>
 
