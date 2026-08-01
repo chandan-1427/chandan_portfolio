@@ -25,7 +25,7 @@ export default function HeroSection() {
 
   return (
     <section id="hero" className="relative min-h-screen overflow-hidden">
-      <div className="flex min-h-screen items-center justify-center bg-green-950 m-10 rounded-[50px] px-4 sm:px-6">
+      <div className="flex min-h-screen items-center justify-center bg-green-900 m-3 rounded-[24px] px-4 sm:m-6 sm:rounded-[32px] sm:px-6 md:m-10 md:rounded-[50px]">
         <motion.div
           className="flex flex-col items-center text-center"
           initial={shouldReduceMotion ? undefined : "hidden"}
@@ -33,7 +33,7 @@ export default function HeroSection() {
           variants={container}
         >
           <motion.p
-            className="mb-3 text-xs uppercase tracking-[0.3em] text-white/80 sm:mb-4"
+            className="mb-3 text-xs uppercase tracking-[0.3em] text-white/90 sm:mb-4"
             variants={fadeUp}
           >
             Hello! I&apos;m
@@ -44,7 +44,7 @@ export default function HeroSection() {
               <motion.span
                 key={`${letter}-${index}`}
                 aria-hidden="true"
-                className="inline-block text-[50px] font-thin tracking-[0.12em] text-white/90 md:text-[90px] lg:text-[110px]"
+                className="inline-block text-[36px] font-thin tracking-[0.08em] text-white sm:text-[50px] sm:tracking-[0.12em] md:text-[90px] lg:text-[110px]"
                 variants={{
                   hidden: { opacity: 0, y: index % 2 === 0 ? -24 : 24 },
                   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -56,7 +56,7 @@ export default function HeroSection() {
           </h1>
 
           <motion.p
-            className="mt-5 uppercase max-w-[90%] text-sm font-light tracking-[0.10em] text-white/80 sm:mt-6 md:max-w-2xl md:text-[16px]"
+            className="mt-5 uppercase max-w-[90%] text-sm font-light tracking-[0.10em] text-white sm:mt-6 md:max-w-2xl md:text-[16px]"
             variants={fadeUp}
           >
             {TAGLINE}
@@ -66,7 +66,7 @@ export default function HeroSection() {
             href="/chandan.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group relative mt-8 flex w-fit shrink-0 items-center gap-1.5 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-xs tracking-wide text-white/70 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_4px_8px_-2px_rgba(0,0,0,0.2)] transition-colors duration-200 hover:border-white/[0.12] hover:bg-white/[0.07] hover:text-white/70 active:bg-white/[0.03] active:shadow-none sm:mt-10"
+            className="group relative mt-8 flex w-fit shrink-0 items-center gap-1.5 rounded-md border border-white/[0.08] bg-white/[0.04] px-3 py-1.5 text-xs tracking-wide text-white/90 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_4px_8px_-2px_rgba(0,0,0,0.2)] transition-colors duration-200 hover:border-white/[0.12] hover:bg-white/[0.07] hover:text-white/70 active:bg-white/[0.03] active:shadow-none sm:mt-10"
             variants={fadeUp}
             whileTap={
               shouldReduceMotion

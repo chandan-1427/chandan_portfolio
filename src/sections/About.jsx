@@ -46,7 +46,7 @@ export default function AboutSection() {
               <Description
                 key={paragraph.slice(0, 24)}
                 desc={paragraph}
-                className="text-[1.06rem] leading-[1.618] text-white/80"
+                className="text-[1.06rem] leading-[1.618] text-white"
               />
             ))}
           </div>
