@@ -46,8 +46,8 @@ export default function App() {
       import("./layouts/Footer"),
     ]);
 
-    // Small minimum duration so the loader doesn't flash for 1 frame
-    const minDelay = new Promise((resolve) => setTimeout(resolve, 400));
+    // Minimum duration so the loader is visible for at least 1 second
+    const minDelay = new Promise((resolve) => setTimeout(resolve, 3000));
 
     Promise.all([fontsReady, contentReady, minDelay]).then(() => setReady(true));
   }, []);
@@ -57,7 +57,7 @@ export default function App() {
       <DotGridLoader visible={!ready} />
       <Sidebar />
       <Suspense fallback={null}>
-        <HeroSection />
+        <HeroSection ready={ready} />
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />

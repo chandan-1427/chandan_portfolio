@@ -19,7 +19,7 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
 };
 
-export default function HeroSection() {
+export default function HeroSection({ ready = true }) {
   const shouldReduceMotion = useReducedMotion();
   const [resumeHovered, resumeHoverProps] = useHover();
 
@@ -29,7 +29,7 @@ export default function HeroSection() {
         <motion.div
           className="flex flex-col items-center text-center"
           initial={shouldReduceMotion ? undefined : "hidden"}
-          animate={shouldReduceMotion ? undefined : "visible"}
+          animate={shouldReduceMotion ? undefined : ready ? "visible" : "hidden"}
           variants={container}
         >
           <motion.p

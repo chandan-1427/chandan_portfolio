@@ -16,7 +16,7 @@ export default function DotGridLoader({ visible }) {
     >
       {visible && (
         <div
-          className="grid h-[95vh] w-[95vw] place-items-center rounded-3xl"
+          className="grid h-64 w-64 place-items-center gap-2 rounded-3xl sm:h-80 sm:w-80"
           style={{
             gridTemplateColumns: `repeat(${cols}, minmax(0, 1fr))`,
             gridTemplateRows: `repeat(${rows}, minmax(0, 1fr))`,
