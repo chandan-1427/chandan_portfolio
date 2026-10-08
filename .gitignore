@@ -1,9 +1,3 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-pnpm-debug.log*
-
 # Dependencies
 node_modules
 
@@ -11,13 +5,30 @@ node_modules
 .next
 out
 
-# Local environment overrides
-*.local
-.vscode/*
-
-skills-lock.json
-
-.claude/
 # TypeScript
 next-env.d.ts
 *.tsbuildinfo
+
+# Environment variables and secrets
+.env*
+*.local
+*.pem
+
+# Vercel CLI project link
+.vercel
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Editor and OS files
+.vscode/*
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local tooling
+skills-lock.json
+.claude/
