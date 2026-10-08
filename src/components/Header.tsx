@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-export const NAV = [
+const NAV = [
   { id: "work", label: "Work" },
   { id: "experience", label: "Experience" },
   { id: "about", label: "About" },

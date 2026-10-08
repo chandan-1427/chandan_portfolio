@@ -1,35 +1,36 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Inter, Fraunces, Stalemate } from "next/font/google";
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/data/site";
 import "@/index.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", display: "swap" });
-const stalemate = Stalemate({ subsets: ["latin"], weight: "400", variable: "--font-stalemate", display: "swap" });
+// Only used for the footer signature, so it is not preloaded on first paint
+const stalemate = Stalemate({ subsets: ["latin"], weight: "400", variable: "--font-stalemate", display: "swap", preload: false });
 
-const SITE_URL = "https://portfolio-1-two-lovat.vercel.app";
-const TITLE = "Chandan, full-stack developer";
-const DESCRIPTION =
-  "Chandan is a full-stack developer from Kadapa, India, building web apps and AI agents. Projects, experience and contact.";
-
+// Icons and share images come from files in this folder (icon.svg, favicon.ico,
+// apple-icon.png, opengraph-image.png, twitter-image.png).
+// The title stays fixed: it's what shows in tabs, bookmarks, history and search results.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Chandan",
-  description: DESCRIPTION,
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  applicationName: "Chandan",
+  authors: [{ name: "Dakka Chandan", url: SITE_URL }],
   alternates: { canonical: "/" },
-  icons: { icon: "/CJ.png", apple: "/CJ.png" },
   openGraph: {
-    title: TITLE,
-    description: DESCRIPTION,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     type: "website",
     url: "/",
-    images: ["/og-image.png"],
+    siteName: "Chandan",
   },
   twitter: {
     card: "summary_large_image",
-    title: TITLE,
-    description: DESCRIPTION,
-    images: ["/og-image.png"],
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    creator: "@chandan_1427",
   },
 };
 

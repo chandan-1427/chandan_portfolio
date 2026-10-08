@@ -9,7 +9,6 @@
 
 /* One accent, kept scarce: section labels, the primary link of each project, focus */
 @theme {
-  --color-accent: #3370D1;
   --color-accent-text: #6E9DEB;
 }
 

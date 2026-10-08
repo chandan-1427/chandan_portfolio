@@ -33,6 +33,8 @@ This project is a small example of choosing clarity, simplicity, and readability
 - Name animation that plays once per visit, and not when reduced motion is on
 - Consistent keyboard focus ring, skip link, and readable contrast
 - Resume as a PDF
+- SVG favicon that switches between black and white with the browser theme, plus `.ico`, Apple touch and manifest icons
+- 1200×630 share image, `robots.txt`, `sitemap.xml`, and Person structured data
 
 #### Project Structure
 
