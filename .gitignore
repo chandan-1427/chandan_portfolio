@@ -8,7 +8,8 @@ pnpm-debug.log*
 node_modules
 
 # Build output
-dist
+.next
+out
 
 # Local environment overrides
 *.local

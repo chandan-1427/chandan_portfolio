@@ -1,6 +1,6 @@
 ### Portfolio
 
-A clean and minimal portfolio website built with React and Vite.
+A clean and minimal portfolio website built with React and Next.js.
 
 #### Description
 
@@ -19,7 +19,7 @@ This project is a small example of choosing clarity, simplicity, and readability
 #### Tech Stack
 
 - React 19.2.4
-- Vite 8
+- Next.js 16 (App Router)
 - Tailwind CSS 4.2.2
 - Lenis (smooth scrolling)
 - React Icons
