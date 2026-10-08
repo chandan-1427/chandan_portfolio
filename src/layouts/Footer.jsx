@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import { scrollTo } from "@/lib/scrollTo";
 import MyImage from "@/assets/blue-me.png";
@@ -14,6 +14,13 @@ export default function Footer() {
   const [loaded, setLoaded] = useState(false);
   const [nameHovered, nameHoverProps] = useHover();
   const shouldReduceMotion = useReducedMotion();
+  const imgRef = useRef(null);
+
+  // The server-rendered image can finish loading before hydration,
+  // in which case onLoad never fires
+  useEffect(() => {
+    if (imgRef.current?.complete) setLoaded(true);
+  }, []);
 
   return (
     <footer className="flex min-h-screen flex-col items-center justify-center px-4 pb-8 mx-3 mt-3 rounded-t-[24px] sm:mx-6 sm:mt-6 sm:rounded-t-[32px] bg-red-700">
@@ -24,7 +31,8 @@ export default function Footer() {
             <div className="absolute inset-0 rounded-2xl bg-white/[0.04] ring-1 ring-white/[0.08]" />
           )}
           <motion.img
-            src={MyImage}
+            ref={imgRef}
+            src={MyImage.src}
             alt="Chandan"
             onLoad={() => setLoaded(true)}
             className="h-full w-full bg-red-700/90 rounded-2xl object-cover ring-2 ring-white/[0.10] backdrop-blur-md shadow-[inset_0_4px_0_0_rgba(255,255,255,0.08),0_8px_16px_-4px_rgba(0,0,0,0.75)]"
