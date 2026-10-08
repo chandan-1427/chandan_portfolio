@@ -1,67 +1,80 @@
-/* fonts */
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/stalemate";
-@import '@fontsource-variable/fraunces/wght.css';
-
 @import "tailwindcss";
 
+/* Font families come from next/font (self-hosted, Latin subset only) */
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-script: var(--font-stalemate), cursive;
+}
+
+/* One accent, kept scarce: section labels, the primary link of each project, focus */
 @theme {
-  --font-inter:     "Inter", sans-serif;
-  --font-stalemate: "Stalemate", sans-serif;
-  --font-france: 'Fraunces Variable', serif;
+  --color-accent: #3370D1;
+  --color-accent-text: #6E9DEB;
 }
 
 @layer base {
   :root {
-    --color-bg:             #000000;
-    --scrollbar-thumb:      rgba(255, 255, 255, 0.18);
-    --scrollbar-thumb-hover: rgba(255, 255, 255, 0.28);
+    --color-bg: #000000;
+    color-scheme: dark;
   }
 
   html {
     scrollbar-gutter: stable;
     scrollbar-width: thin;
-    scrollbar-color: var(--scrollbar-thumb) var(--color-bg);
+    scrollbar-color: rgba(255, 255, 255, 0.18) var(--color-bg);
+    -webkit-text-size-adjust: 100%;
   }
 
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  ::-webkit-scrollbar-track,
-  ::-webkit-scrollbar-corner {
-    background: var(--color-bg);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb);
-    border: 2px solid var(--color-bg);
-    border-radius: 999px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--scrollbar-thumb-hover);
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
 
   body {
     background-color: var(--color-bg);
-    color: rgba(255, 255, 255, 0.918);
-    font-family: var(--font-inter);
+    color: rgba(255, 255, 255, 0.92);
+    font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
   ::selection {
-    background: rgba(255, 255, 255, 0.12);
-    color: rgba(255, 255, 255, 0.98);
+    background: rgba(110, 157, 235, 0.3);
+    color: #fff;
   }
 
-  .text-neon {
-    color: #EBEBEB;
+  /* Same ring everywhere: a gap in the background colour, then a 2px ring.
+     Box-shadow follows each element's radius, and it never animates. */
+  :focus-visible {
+    outline: none;
+    transition: none;
+    box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent-text);
   }
+}
 
-  .text-data {
-    color: #E3E3E3;
+/* Intro entrance: the one novel moment, played on the first load of a tab.
+   Pure CSS, so the server-rendered page is readable before any JS runs. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--rise-from, 12px));
+  }
+}
+
+.rise {
+  animation: rise 0.6s ease-out both;
+  animation-delay: var(--delay, 0ms);
+}
+
+:root[data-intro="played"] .rise {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
   }
 }

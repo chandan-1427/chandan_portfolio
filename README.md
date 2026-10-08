@@ -1,10 +1,10 @@
 ### Portfolio
 
-A clean and minimal portfolio website built with React and Next.js.
+A clean and minimal portfolio website built with Next.js.
 
 #### Description
 
-This is my portfolio website showcasing my work as a Full Stack Developer & AI Engineer. The site features a minimal design with smooth scrolling, responsive layout, and clean typography.
+This is my portfolio website showcasing my work as a Full Stack Developer & AI Engineer. The site features a minimal design with a responsive layout and clean typography.
 
 View in your browser - [portfolio-1-two-lovat.vercel.app](https://portfolio-1-two-lovat.vercel.app)
 
@@ -18,62 +18,51 @@ This project is a small example of choosing clarity, simplicity, and readability
 
 #### Tech Stack
 
-- React 19.2.4
-- Next.js 16 (App Router)
-- Tailwind CSS 4.2.2
-- Lenis (smooth scrolling)
-- React Icons
-- Tailwind Merge
-- Inter, Fraunces Variable and Stalemate fonts
+- Next.js 16 (App Router), with every section rendered on the server
+- React 19 and TypeScript (strict mode)
+- Tailwind CSS 4
+- Inter, Fraunces and Stalemate, self-hosted through `next/font` (Latin subset only)
 
 #### Features
 
-- Smooth scrolling with Lenis
-- Sidebar navigation (desktop)
-- Bottom navigation (mobile)
-- Hero section with animated text
-- Downloadable resume
-- About section with experience cards
-- Skills section with categorized technologies
-- Data-driven projects showcase with live and source-code links
-- Contact section with email copy and social links
-- Reusable cards, tags, buttons, metadata rows, and tooltips
-- Back-to-top footer
-- Lazy-loaded sections with React Suspense
-- Reduced motion support
-- Custom scrollbar and text selection styles
+- One column of content with section labels beside it on wide screens
+- Sticky header that shows which section you're reading
+- Projects written as what it is, what was hard, and what it's built with
+- Experience timeline and a short about section with the tools I use
+- Email link with a copy button that confirms inline and announces to screen readers
+- Name animation that plays once per visit, and not when reduced motion is on
+- Consistent keyboard focus ring, skip link, and readable contrast
+- Resume as a PDF
 
 #### Project Structure
 
 ```
 src/
+  app/
+    layout.tsx            # Fonts, metadata, and the play-once intro script
+    page.tsx              # Renders the page
   components/
-    Description.jsx       # Shared descriptive text
-    LinkButton.jsx        # External link button
-    MetaDataRow.jsx       # Card title and metadata
-    SectionEyebrow.jsx    # Section label
-    TagList.jsx           # Reusable technology tags
-    ToolTip.jsx           # Navigation and social tooltips
+    Header.tsx            # Sticky navigation with the current section (client)
+    Section.tsx           # Label column + content column layout
+    TextLink.tsx          # Inline link, marks external links
+    CopyEmail.tsx         # Copy-to-clipboard button (client)
   data/
-    experience_items.js   # Experience content
-    projects.js           # Project content
-    skills.js             # Grouped skills
-    socials.js            # Social links
-  layouts/
-    Footer.jsx            # Back-to-top footer
-    Sidebar.jsx           # Responsive navigation
-  lib/
-    cn.js                 # Tailwind class merging utility
-    scrollTo.js           # Accessible section scrolling
+    profile.ts            # Name, intro, email, links
+    projects.ts           # Projects
+    experience.ts         # Work history
+    about.ts              # About text and tools
   sections/
-    Hero.jsx              # Landing section and resume link
-    About.jsx             # Background and experience
-    Skills.jsx            # Categorized technical skills
-    Projects.jsx          # Project showcase
-    Contact.jsx           # Email and social links
-  App.jsx                 # App layout, lazy loading, and Lenis setup
-  index.css               # Fonts, global styles, and Tailwind theme
-  main.jsx                # React entry point
+    Intro.tsx             # Name, one-line intro, main links
+    Work.tsx              # Projects
+    Experience.tsx        # Timeline
+    About.tsx             # About text and tools
+    Contact.tsx           # Email and profiles
+    Footer.tsx            # Signature and links
+  types/
+    content.ts            # Types for the content in data/
+    css.d.ts              # Allows CSS variables in style props
+  App.tsx                 # Page layout
+  index.css               # Theme tokens and global styles
 ```
 
 #### Design Approach
@@ -120,7 +109,7 @@ This is a small project, but it represents my design mindset. I prefer clean and
    ```bash
    pnpm dev
    ```
-5. Open [http://localhost:5173](http://localhost:5173) in your browser
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 #### Build
 
@@ -129,9 +118,9 @@ To build for production:
 pnpm build
 ```
 
-Preview the production build:
+Run the production build:
 ```bash
-pnpm preview
+pnpm start
 ```
 
 #### Lint
