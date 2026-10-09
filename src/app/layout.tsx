@@ -9,8 +9,19 @@ const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", dis
 // Only used for the footer signature, so it is not preloaded on first paint
 const stalemate = Stalemate({ subsets: ["latin"], weight: "400", variable: "--font-stalemate", display: "swap", preload: false });
 
-// Icons and share images come from files in this folder (icon.svg, favicon.ico,
-// apple-icon.png, opengraph-image.png, twitter-image.png).
+// Icons and the share image live in public/. Bump ASSET_VERSION after changing
+// any of them, so browsers and link previews fetch the new files.
+const ASSET_VERSION = "1";
+const asset = (path: string) => `${path}?v=${ASSET_VERSION}`;
+
+const SHARE_IMAGE = {
+  url: asset("/og-image.png"),
+  width: 1200,
+  height: 630,
+  type: "image/png",
+  alt: "Chandan, full-stack developer from Kadapa, India",
+};
+
 // The title stays fixed: it's what shows in tabs, bookmarks, history and search results.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -19,18 +30,28 @@ export const metadata: Metadata = {
   applicationName: "Chandan",
   authors: [{ name: "Dakka Chandan", url: SITE_URL }],
   alternates: { canonical: "/" },
+  icons: {
+    // .ico first as the fallback; browsers that support SVG use the theme-aware one
+    icon: [
+      { url: asset("/favicon.ico"), sizes: "48x48", type: "image/x-icon" },
+      { url: asset("/icons/icon.svg"), sizes: "any", type: "image/svg+xml" },
+    ],
+    apple: [{ url: asset("/icons/apple-icon.png"), sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     type: "website",
     url: "/",
     siteName: "Chandan",
+    images: [SHARE_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     creator: "@chandan_1427",
+    images: [SHARE_IMAGE],
   },
 };
 

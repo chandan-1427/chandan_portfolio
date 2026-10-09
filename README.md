@@ -42,13 +42,20 @@ This project is a small example of choosing clarity, simplicity, and readability
 src/
   app/
     layout.tsx            # Fonts, metadata, and the play-once intro script
-    page.tsx              # Renders the page
+    page.tsx              # Renders the page and its structured data
+    not-found.tsx         # 404 page
+    error.tsx             # Fallback if a page fails to render
+    manifest.ts           # Web app manifest (name, icons)
+    robots.ts             # robots.txt
+    sitemap.ts            # sitemap.xml
   components/
     Header.tsx            # Sticky navigation with the current section (client)
+    HashlessAnchors.tsx   # Section links that don't add #hash to the URL (client)
     Section.tsx           # Label column + content column layout
     TextLink.tsx          # Inline link, marks external links
     CopyEmail.tsx         # Copy-to-clipboard button (client)
   data/
+    site.ts               # Site URL, title, description
     profile.ts            # Name, intro, email, links
     projects.ts           # Projects
     experience.ts         # Work history
@@ -65,6 +72,11 @@ src/
     css.d.ts              # Allows CSS variables in style props
   App.tsx                 # Page layout
   index.css               # Theme tokens and global styles
+public/
+  favicon.ico             # Fallback favicon
+  icons/                  # SVG, Apple and manifest icons
+  og-image.png            # Share image for link previews
+  chandan.pdf             # Resume
 ```
 
 #### Design Approach
