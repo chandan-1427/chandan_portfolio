@@ -40,6 +40,15 @@
     text-rendering: optimizeLegibility;
   }
 
+  /* Even line lengths for headings, and no lone word left on a paragraph's last line */
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  p, li, dd {
+    text-wrap: pretty;
+  }
+
   ::selection {
     background: rgba(110, 157, 235, 0.3);
     color: #fff;

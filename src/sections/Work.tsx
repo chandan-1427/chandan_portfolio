@@ -16,14 +16,15 @@ function Project({ project, index }: { project: ProjectData; index: number }) {
           {name}
         </h3>
 
-        <ul className="flex gap-x-4 text-[14px]">
+        {/* Padded links that touch; negative margins keep the row's height and alignment */}
+        <ul className="-mx-2.5 -my-2 flex text-[14px]">
           {live && (
             <li>
-              <TextLink href={live} accent>Live site</TextLink>
+              <TextLink href={live} accent padded>Live site</TextLink>
             </li>
           )}
           <li>
-            <TextLink href={code}>Code</TextLink>
+            <TextLink href={code} padded>Code</TextLink>
           </li>
         </ul>
       </div>

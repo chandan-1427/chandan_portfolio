@@ -33,22 +33,24 @@ export default function Intro() {
         <p className="text-[15px] text-white/55">{PROFILE.status}</p>
       </div>
 
+      {/* Padded links that touch: bigger tap targets and no dead gaps between them.
+          The negative margins keep the text aligned with the paragraph above. */}
       <ul
-        className="rise mt-8 flex flex-wrap gap-x-5 gap-y-2 text-[15px]"
+        className="rise -mx-2.5 mt-6 flex flex-wrap text-[15px]"
         style={{ "--delay": `${afterName + 80}ms` }}
       >
         <li>
-          <TextLink href={`mailto:${PROFILE.email}`} external={false} accent>
+          <TextLink href={`mailto:${PROFILE.email}`} external={false} accent padded>
             Email
           </TextLink>
         </li>
         {LINKS.slice(0, 2).map((link) => (
           <li key={link.label}>
-            <TextLink href={link.href}>{link.label}</TextLink>
+            <TextLink href={link.href} padded>{link.label}</TextLink>
           </li>
         ))}
         <li>
-          <TextLink href={PROFILE.resume}>
+          <TextLink href={PROFILE.resume} padded>
             Resume <span className="text-white/50">PDF</span>
           </TextLink>
         </li>
