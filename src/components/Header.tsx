@@ -34,14 +34,15 @@ function useCurrentSection() {
   return current;
 }
 
-export default function Header({ name }: { name: string }) {
+// `base` is "" on the homepage and "/" elsewhere, so section links lead back to the homepage
+export default function Header({ name, base = "" }: { name: string; base?: string }) {
   const current = useCurrentSection();
 
   return (
     <header className="sticky top-0 z-40 bg-black/85 backdrop-blur-sm">
       <div className="mx-auto flex h-14 max-w-[1080px] items-center justify-between px-5 sm:px-8">
         <a
-          href="#top"
+          href={`${base}#top`}
           className="-mx-1 rounded-sm px-1 font-serif text-[17px] font-medium text-white"
         >
           {name}
@@ -55,7 +56,7 @@ export default function Header({ name }: { name: string }) {
               return (
                 <li key={item.id}>
                   <a
-                    href={`#${item.id}`}
+                    href={`${base}#${item.id}`}
                     aria-current={isCurrent ? "location" : undefined}
                     className={`block rounded-sm px-2 py-4 text-[13px] transition-colors duration-150 sm:px-2.5 ${
                       isCurrent ? "text-white" : "text-white/55 hover:text-white"
