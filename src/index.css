@@ -61,6 +61,12 @@
     transition: none;
     box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent-text);
   }
+
+  /* Sections receive focus after an in-page jump, but they aren't controls,
+     so they don't get a ring */
+  section:focus-visible {
+    box-shadow: none;
+  }
 }
 
 /* Intro entrance: the one novel moment, played on the first load of a tab.

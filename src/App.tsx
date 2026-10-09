@@ -1,4 +1,5 @@
 import Header from "./components/Header";
+import HashlessAnchors from "./components/HashlessAnchors";
 import Intro from "./sections/Intro";
 import Work from "./sections/Work";
 import Experience from "./sections/Experience";
@@ -16,6 +17,7 @@ export default function App() {
       >
         Skip to work
       </a>
+      <HashlessAnchors />
       <Header name={PROFILE.name} />
       <div className="mx-auto max-w-[1080px] px-5 sm:px-8">
         <main>
