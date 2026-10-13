@@ -39,7 +39,7 @@ function Project({ project, index }: { project: ProjectData; index: number }) {
         ))}
       </ul>
 
-      <p className="mt-5 text-[13px] leading-relaxed text-white/50">
+      <p className="mt-5 text-[15px] leading-relaxed text-white/50">
         <span className="sr-only">Built with: </span>
         {stack.join(" · ")}
       </p>
