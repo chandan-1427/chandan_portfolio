@@ -49,7 +49,6 @@ src/
     robots.ts             # robots.txt
     sitemap.ts            # sitemap.xml
   components/
-    Header.tsx            # Sticky navigation with the current section (client)
     HashlessAnchors.tsx   # Section links that don't add #hash to the URL (client)
     Section.tsx           # Label column + content column layout
     TextLink.tsx          # Inline link, marks external links

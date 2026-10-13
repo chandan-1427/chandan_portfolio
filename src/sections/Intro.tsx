@@ -8,7 +8,7 @@ export default function Intro() {
   const afterName = 120 + letters.length * LETTER_STAGGER;
 
   return (
-    <section id="top" className="scroll-mt-14 pb-16 pt-16 md:pb-24 md:pt-28">
+    <section id="top" className="pb-16 pt-16 md:pb-24 md:pt-28">
       <h1
         aria-label={PROFILE.name}
         className="font-serif text-[clamp(56px,11vw,120px)] font-normal leading-none tracking-tight text-white"

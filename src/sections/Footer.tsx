@@ -5,7 +5,7 @@ const linkClass =
 
 export default function Footer() {
   return (
-    <footer id="site-footer" className="pb-10 pt-10 sm:pb-12 sm:pt-12">
+    <footer className="pb-10 pt-10 sm:pb-12 sm:pt-12">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <p className="font-script text-[44px] leading-none text-white">{PROFILE.name}.</p>
 
