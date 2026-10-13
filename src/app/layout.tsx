@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { Inter, Fraunces, Stalemate } from "next/font/google";
+import ScrollbarAutoHide from "@/components/ScrollbarAutoHide";
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/data/site";
 import "@/index.css";
 
@@ -73,7 +74,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: introScript }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <ScrollbarAutoHide />
+        {children}
+      </body>
     </html>
   );
 }

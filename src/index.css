@@ -12,6 +12,14 @@
   --color-accent-text: #6E9DEB;
 }
 
+/* Registered so the scrollbar thumb colour can be transitioned (plain colours in
+   scrollbar-color can't be). Browsers without @property simply show and hide it. */
+@property --scrollbar-thumb {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: rgba(255, 255, 255, 0.18);
+}
+
 @layer base {
   :root {
     --color-bg: #000000;
@@ -19,10 +27,57 @@
   }
 
   html {
+    --scrollbar-thumb: rgba(255, 255, 255, 0.18);
     scrollbar-gutter: stable;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.18) var(--color-bg);
     -webkit-text-size-adjust: 100%;
+    /* Appearing is quick, so scrolling feels immediate */
+    transition: --scrollbar-thumb 150ms ease-out;
+  }
+
+  /* Chrome, Edge and Safari: the ::-webkit-scrollbar styles below draw a thin thumb with
+     no arrow buttons. Chrome ignores them if scrollbar-width or scrollbar-color is set, so
+     the standard properties only apply to browsers without these selectors (Firefox),
+     whose thin scrollbar has no arrows anyway. */
+  @supports not selector(::-webkit-scrollbar) {
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: var(--scrollbar-thumb) var(--color-bg);
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
+    background: var(--color-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border: 2px solid var(--color-bg);
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  /* The thumb hides while idle and shows while scrolling or when the pointer nears it
+     (see ScrollbarAutoHide). Without JavaScript the attribute is never set, so it stays visible. */
+  html[data-scrollbar="idle"] {
+    --scrollbar-thumb: transparent;
+    /* Fading out is gentler than appearing */
+    transition: --scrollbar-thumb 400ms ease;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html,
+    html[data-scrollbar="idle"] {
+      transition: none;
+    }
   }
 
   @media (prefers-reduced-motion: no-preference) {
