@@ -1,5 +1,6 @@
 import TextLink from "@/components/TextLink";
 import { PROFILE, LINKS } from "@/data/profile";
+import { GMAIL_COMPOSE_URL } from "@/lib/email";
 
 const LETTER_STAGGER = 40;
 
@@ -40,7 +41,8 @@ export default function Intro() {
         style={{ "--delay": `${afterName + 80}ms` }}
       >
         <li>
-          <TextLink href={`mailto:${PROFILE.email}`} external={false} accent padded>
+          {/* Opens Gmail's compose window in a new tab, with a starter message */}
+          <TextLink href={GMAIL_COMPOSE_URL} accent padded>
             Email
           </TextLink>
         </li>
