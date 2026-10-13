@@ -16,7 +16,6 @@ export default function HashlessAnchors() {
     }
 
     const onClick = (event: MouseEvent) => {
-      // Leave new-tab and other modified clicks to the browser
       if (event.defaultPrevented || event.button !== 0) return;
       if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
 
@@ -27,8 +26,7 @@ export default function HashlessAnchors() {
       if (!target) return;
 
       event.preventDefault();
-      // Smooth or instant comes from CSS scroll-behavior, which respects reduced motion,
-      // and scroll-margin keeps the section clear of the sticky header
+      // No behavior option: smooth or instant comes from CSS scroll-behavior, which respects reduced motion
       target.scrollIntoView({ block: "start" });
       // Move focus like a real anchor jump, so the next Tab continues from the section
       if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");

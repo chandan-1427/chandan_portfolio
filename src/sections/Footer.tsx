@@ -9,7 +9,6 @@ export default function Footer() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <p className="font-script text-[44px] leading-none text-white">{PROFILE.name}.</p>
 
-        {/* Padded links that touch each other: bigger targets, no gaps */}
         <ul className="-mx-2 -mb-2 flex text-[14px]">
           <li>
             <a href={PROFILE.source} target="_blank" rel="noopener noreferrer" className={linkClass}>

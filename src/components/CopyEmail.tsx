@@ -6,7 +6,6 @@ type CopyStatus = "idle" | "copied" | "failed";
 
 const LABELS: Record<CopyStatus, string> = { idle: "Copy", copied: "Copied", failed: "Couldn't copy" };
 
-// Feedback appears on the button itself, not in a separate notification
 export default function CopyEmail({ email }: { email: string }) {
   const [status, setStatus] = useState<CopyStatus>("idle");
 

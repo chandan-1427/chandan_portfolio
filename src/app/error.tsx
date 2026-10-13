@@ -2,8 +2,6 @@
 
 import TextLink from "@/components/TextLink";
 
-// Shown if something on a page fails while rendering. Rare on this mostly
-// static site, but it gives visitors a way forward instead of a blank screen.
 export default function ErrorPage({ reset }: { error: Error & { digest?: string }; reset: () => void }) {
   return (
     <main className="mx-auto max-w-[1080px] px-5 sm:px-8">

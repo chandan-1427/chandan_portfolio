@@ -10,9 +10,7 @@ export default function Contact() {
         Email is the best way to reach me, about a job or anything else.
       </p>
 
-      {/* The address and its Copy button stay on one line, as one unit */}
       <div className="mt-5 flex items-center justify-between gap-3 sm:justify-start sm:gap-4">
-        {/* Opens Gmail's compose window in a new tab; Copy is the fallback for everyone else */}
         <a
           href={GMAIL_COMPOSE_URL}
           target="_blank"
@@ -25,7 +23,6 @@ export default function Contact() {
         <CopyEmail email={PROFILE.email} />
       </div>
 
-      {/* Each row is one tap target, and the rows touch, so there are no dead gaps */}
       <ul className="mt-10 border-t border-white/[0.08]">
         {LINKS.map((link) => (
           <li key={link.label} className="border-b border-white/[0.08]">

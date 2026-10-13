@@ -55,14 +55,11 @@ export default function Intro() {
         <p className="text-[15px] text-white/55">Based in Kadapa, India.</p>
       </div>
 
-      {/* Padded links that touch: bigger tap targets and no dead gaps between them.
-          The negative margins keep the text aligned with the paragraph above. */}
       <ul
         className="rise -mx-2.5 mt-6 flex flex-wrap text-[15px]"
         style={{ "--delay": `${afterName + 80}ms` }}
       >
         <li>
-          {/* Opens Gmail's compose window in a new tab, with a starter message */}
           <TextLink href={GMAIL_COMPOSE_URL} accent padded>
             Email
           </TextLink>

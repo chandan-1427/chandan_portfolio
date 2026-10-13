@@ -2,8 +2,6 @@ import App from "@/App";
 import { PROFILE, LINKS } from "@/data/profile";
 import { SITE_URL } from "@/data/site";
 
-// Structured data so search engines know this page is about a person.
-// Only facts that are already visible on the page.
 const person = {
   "@context": "https://schema.org",
   "@type": "Person",

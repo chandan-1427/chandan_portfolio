@@ -23,7 +23,6 @@ const SHARE_IMAGE = {
   alt: "Chandan, full-stack developer from Kadapa, India",
 };
 
-// The title stays fixed: it's what shows in tabs, bookmarks, history and search results.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: SITE_TITLE,

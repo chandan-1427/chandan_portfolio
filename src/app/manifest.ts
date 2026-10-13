@@ -1,8 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/data/site";
 
-// Gives the site a name and icon when saved to a home screen.
-// "browser" keeps it a normal web page rather than a standalone app window.
+// display "browser" keeps it a normal web page rather than a standalone app window
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: SITE_TITLE,

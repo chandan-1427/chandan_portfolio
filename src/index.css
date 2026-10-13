@@ -7,7 +7,6 @@
   --font-script: var(--font-stalemate), cursive;
 }
 
-/* One accent, kept scarce: primary links (Email, Live site), the 404 and error labels, focus rings and selection */
 @theme {
   --color-accent-text: #6E9DEB;
 }
@@ -30,7 +29,6 @@
     --scrollbar-thumb: rgba(255, 255, 255, 0.18);
     scrollbar-gutter: stable;
     -webkit-text-size-adjust: 100%;
-    /* Appearing is quick, so scrolling feels immediate */
     transition: --scrollbar-thumb 150ms ease-out;
   }
 
@@ -69,7 +67,6 @@
      (see ScrollbarAutoHide). Without JavaScript the attribute is never set, so it stays visible. */
   html[data-scrollbar="idle"] {
     --scrollbar-thumb: transparent;
-    /* Fading out is gentler than appearing */
     transition: --scrollbar-thumb 400ms ease;
   }
 
@@ -95,7 +92,6 @@
     text-rendering: optimizeLegibility;
   }
 
-  /* Even line lengths for headings, and no lone word left on a paragraph's last line */
   h1, h2, h3 {
     text-wrap: balance;
   }

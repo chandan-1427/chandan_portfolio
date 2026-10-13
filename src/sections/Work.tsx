@@ -16,7 +16,6 @@ function Project({ project, index }: { project: ProjectData; index: number }) {
           {name}
         </h3>
 
-        {/* Padded links that touch; negative margins keep the row's height and alignment */}
         <ul className="-mx-2.5 -my-2 flex text-[14px]">
           {live && (
             <li>
