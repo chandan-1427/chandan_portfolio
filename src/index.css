@@ -7,7 +7,7 @@
   --font-script: var(--font-stalemate), cursive;
 }
 
-/* One accent, kept scarce: section labels, the primary link of each project, focus */
+/* One accent, kept scarce: primary links (Email, Live site), the 404 and error labels, focus rings and selection */
 @theme {
   --color-accent-text: #6E9DEB;
 }

@@ -20,7 +20,7 @@ export default function Section({ id, label, children }: SectionProps) {
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-0">
         <h2
           id={labelId}
-          className="text-[13px] font-medium uppercase tracking-[0.2em] text-accent-text lg:sticky lg:top-12 lg:self-start"
+          className="font-serif text-[clamp(30px,4vw,40px)] font-medium leading-tight text-white lg:sticky lg:top-12 lg:self-start"
         >
           {label}
         </h2>
