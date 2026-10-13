@@ -3,9 +3,6 @@ import type { Profile, ProfileLink } from "@/types/content";
 export const PROFILE: Profile = {
   name: "Chandan",
   fullName: "Dakka Chandan",
-  intro:
-    "Full-stack developer from Kadapa, India. I build web apps and AI agents, from the database to deployment.",
-  status: "Software engineer intern at Abstrabit.",
   email: "chandandakka@gmail.com",
   resume: "/chandan.pdf",
   source: "https://github.com/chandan-1427/chandan_portfolio",

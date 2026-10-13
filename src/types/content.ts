@@ -1,8 +1,6 @@
 export interface Profile {
   name: string;
   fullName: string;
-  intro: string;
-  status: string;
   email: string;
   resume: string;
   source: string;
