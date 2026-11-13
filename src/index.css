@@ -7,8 +7,19 @@
   --font-script: var(--font-stalemate), cursive;
 }
 
-@theme {
-  --color-accent-text: #6E9DEB;
+/* Theme colours. Borders and surfaces use fg (foreground) with opacity, e.g. border-fg/[0.08];
+   secondary text uses the ink steps below. Values are set per theme further down. */
+@theme inline {
+  --color-fg: var(--fg);
+  --color-accent-text: var(--accent-text);
+  /* Secondary text: fg at a set strength. Light mode uses higher values, because the same
+     opacity reads lighter on a light background than on black */
+  --color-ink-60: color-mix(in oklab, var(--fg) var(--ink-60), transparent);
+  --color-ink-65: color-mix(in oklab, var(--fg) var(--ink-65), transparent);
+  --color-ink-70: color-mix(in oklab, var(--fg) var(--ink-70), transparent);
+  --color-ink-75: color-mix(in oklab, var(--fg) var(--ink-75), transparent);
+  --color-ink-80: color-mix(in oklab, var(--fg) var(--ink-80), transparent);
+  --color-ink-90: color-mix(in oklab, var(--fg) var(--ink-90), transparent);
 }
 
 /* Registered so the scrollbar thumb colour can be transitioned (plain colours in
@@ -20,13 +31,87 @@
 }
 
 @layer base {
+  /* Dark is the default; light applies when the system prefers it, unless the visitor
+     picked a theme in the footer (data-theme, set before paint in layout.tsx) */
   :root {
-    --color-bg: #000000;
     color-scheme: dark;
+    --color-bg: #000000;
+    --fg: #ffffff;
+    --accent-text: #6e9deb;
+    --selection: rgba(110, 157, 235, 0.3);
+    --scrollbar-rest: rgba(255, 255, 255, 0.18);
+    --scrollbar-hover: rgba(255, 255, 255, 0.34);
+    --scrollbar-active: rgba(255, 255, 255, 0.5);
+    --burst-dot: #ffffff;
+    --raised-bg: #1c1c1c;
+    --ink-60: 60%;
+    --ink-65: 65%;
+    --ink-70: 70%;
+    --ink-75: 75%;
+    --ink-80: 80%;
+    --ink-90: 90%;
+    --ink-body: 92%;
+    --rule: color-mix(in oklab, var(--fg) 14%, transparent);
+    --raised-bg-hover: #242424;
+    --raised-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.6), 0 4px 12px -2px rgba(0, 0, 0, 0.6);
+    --raised-drop: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
+    --raised-drop-high: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3)) drop-shadow(0 8px 14px rgba(0, 0, 0, 0.3));
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) {
+      color-scheme: light;
+      --color-bg: #fbfbfa;
+      --fg: #111111;
+      --accent-text: #2f64c0;
+      --selection: rgba(47, 100, 192, 0.2);
+      --scrollbar-rest: rgba(0, 0, 0, 0.2);
+      --scrollbar-hover: rgba(0, 0, 0, 0.35);
+      --scrollbar-active: rgba(0, 0, 0, 0.5);
+      --burst-dot: #3370d1;
+      --raised-bg: #ffffff;
+      --ink-60: 72%;
+      --ink-65: 78%;
+      --ink-70: 82%;
+      --ink-75: 85%;
+      --ink-80: 88%;
+      --ink-90: 94%;
+      --ink-body: 96%;
+      --rule: color-mix(in oklab, var(--fg) 14%, transparent);
+      --raised-bg-hover: #f6f6f5;
+      --raised-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), 0 0 0 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.1);
+      --raised-drop: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.03)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.04));
+      --raised-drop-high: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.04)) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.06));
+    }
+  }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
+    --color-bg: #fbfbfa;
+    --fg: #111111;
+    --accent-text: #2f64c0;
+    --selection: rgba(47, 100, 192, 0.2);
+    --scrollbar-rest: rgba(0, 0, 0, 0.2);
+    --scrollbar-hover: rgba(0, 0, 0, 0.35);
+    --scrollbar-active: rgba(0, 0, 0, 0.5);
+    --burst-dot: #3370d1;
+    --raised-bg: #ffffff;
+    --ink-60: 72%;
+    --ink-65: 78%;
+    --ink-70: 82%;
+    --ink-75: 85%;
+    --ink-80: 88%;
+    --ink-90: 94%;
+    --ink-body: 96%;
+    --rule: color-mix(in oklab, var(--fg) 14%, transparent);
+    --raised-bg-hover: #f6f6f5;
+    --raised-shadow: inset 0 1px 0 rgba(255, 255, 255, 1), 0 0 0 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.1);
+    --raised-drop: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.03)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.04));
+    --raised-drop-high: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.04)) drop-shadow(0 8px 16px rgba(0, 0, 0, 0.06));
   }
 
   html {
-    --scrollbar-thumb: rgba(255, 255, 255, 0.18);
+    --scrollbar-thumb: var(--scrollbar-rest);
     scrollbar-gutter: stable;
     -webkit-text-size-adjust: 100%;
     transition: --scrollbar-thumb 150ms ease-out;
@@ -60,11 +145,11 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.34);
+    background: var(--scrollbar-hover);
   }
 
   ::-webkit-scrollbar-thumb:active {
-    background: rgba(255, 255, 255, 0.5);
+    background: var(--scrollbar-active);
   }
 
   ::-webkit-scrollbar-button {
@@ -93,7 +178,7 @@
 
   body {
     background-color: var(--color-bg);
-    color: rgba(255, 255, 255, 0.92);
+    color: color-mix(in srgb, var(--fg) var(--ink-body), transparent);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -109,8 +194,8 @@
   }
 
   ::selection {
-    background: rgba(110, 157, 235, 0.3);
-    color: #fff;
+    background: var(--selection);
+    color: var(--fg);
   }
 
   /* Same ring everywhere: a gap in the background colour, then a 2px ring.
@@ -150,4 +235,230 @@
   .rise {
     animation: none;
   }
+}
+
+/* Hero illustration layers: soft shadows, drawn with filters because SVG shapes can't take box-shadow */
+.hero-raised {
+  filter: var(--raised-drop);
+}
+
+.hero-raised-high {
+  filter: var(--raised-drop-high);
+}
+
+/* Pinned section label on small screens: a solid bar in the page colour, and a gradient
+   under it so content fades out as it scrolls beneath, instead of meeting a hard edge.
+   No backdrop blur: blurring under a sticky bar repaints every scroll frame and flickers. */
+@media (width < 64rem) {
+  .section-label {
+    background-color: var(--color-bg);
+  }
+
+  .section-label::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 1.25rem; /* the same as the gap under the label, so at rest it only covers empty space */
+    background: linear-gradient(var(--color-bg), transparent);
+    pointer-events: none;
+  }
+}
+
+/* Divider lines that fade out at both ends instead of stopping hard.
+   Drawn as a 1px background, so they need no extra elements and take no layout space */
+@utility rule-t {
+  background-image: linear-gradient(90deg, transparent, var(--rule), transparent);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+@utility rule-b {
+  background-image: linear-gradient(90deg, transparent, var(--rule), transparent);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/* Raised surface for buttons and the theme toggle's knob: a lit top edge and a soft
+   drop shadow. The focus ring is added on top so keyboard focus keeps the depth. */
+.raised {
+  background-color: var(--raised-bg);
+  box-shadow: var(--raised-shadow);
+}
+
+@media (hover: hover) {
+  button.raised:hover {
+    background-color: var(--raised-bg-hover);
+  }
+}
+
+.raised:focus-visible {
+  box-shadow: var(--raised-shadow), 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent-text);
+}
+
+/* Copy confirmation: a rare, once-per-visit action, so it gets a small celebration.
+   The burst and flood are one-offs, so keyframes; the icon swap is a state change,
+   so transitions, which can be interrupted by rapid clicks without restarting. */
+
+@keyframes copy-burst-dot {
+  from {
+    opacity: 1;
+    transform: rotate(var(--angle)) translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(var(--angle)) translateY(-20px) scale(0.3);
+  }
+}
+
+@keyframes copy-flood {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes copy-wave {
+  to {
+    transform: translateX(-40px);
+  }
+}
+
+.copy-fill-clip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Resting state is invisible; when the label returns to "Copy" the blue fades out */
+.copy-fill {
+  position: absolute;
+  inset: 0;
+  background: #3370D1;
+  opacity: 0;
+  transition: opacity 450ms ease;
+}
+
+.copy-fill.is-flooding {
+  opacity: 1;
+  transition: none;
+  animation: copy-flood 900ms cubic-bezier(0.3, 0.7, 0.3, 1) both;
+}
+
+/* Wavy top edge that drifts sideways while the water rises: one crest and trough per 40px */
+.copy-fill-wave {
+  position: absolute;
+  /* Overlaps the fill by 1px: edge to edge, fractional display scaling can round them
+     apart and leave a see-through hairline between the wave and the water */
+  bottom: calc(100% - 1px);
+  left: 0;
+  width: calc(100% + 40px);
+  height: 6px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='6' viewBox='0 0 40 6'%3E%3Cpath d='M0 3C5 .5 15 .5 20 3S35 5.5 40 3V6H0z' fill='%233370D1'/%3E%3C/svg%3E") repeat-x;
+  background-size: 40px 6px;
+  animation: copy-wave 1500ms linear infinite;
+}
+
+.copy-icon,
+.copy-check {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transition:
+    opacity 250ms ease,
+    transform 250ms ease;
+}
+
+.copy-icon.is-hidden,
+.copy-check {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.copy-check.is-shown {
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 250ms ease,
+    transform 500ms cubic-bezier(0.3, 1.6, 0.5, 1);
+}
+
+.copy-burst {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.copy-burst i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  border-radius: 999px;
+  background: var(--burst-dot);
+  opacity: 0;
+  animation: copy-burst-dot 800ms ease-out both;
+}
+
+/* Reduced motion: the button still turns blue with a check, just without movement */
+@media (prefers-reduced-motion: reduce) {
+  .copy-fill.is-flooding {
+    animation: none;
+  }
+
+  .copy-icon,
+  .copy-check {
+    transform: none !important;
+  }
+
+  .copy-fill {
+    transition: none;
+  }
+
+  .copy-burst,
+  .copy-fill-wave {
+    display: none;
+  }
+}
+
+/* Theme toggle indicator. The edge on the side it's moving toward goes first and the
+   trailing edge catches up, so it stretches toward the target and settles back to size.
+   No data-dir (first paint, hydration) means no transition. */
+.theme-pill[data-dir="right"] {
+  transition:
+    right 300ms cubic-bezier(0.3, 1.3, 0.5, 1),
+    left 420ms cubic-bezier(0.6, 0, 0.2, 1) 40ms;
+}
+
+.theme-pill[data-dir="left"] {
+  transition:
+    left 300ms cubic-bezier(0.3, 1.3, 0.5, 1),
+    right 420ms cubic-bezier(0.6, 0, 0.2, 1) 40ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-pill[data-dir] {
+    transition: none;
+  }
+}
+
+/* Theme icons fill in when selected */
+.icon-fill {
+  transition: fill-opacity 200ms ease;
+}
+
+:root.theme-switching *:not(.theme-pill):not(.icon-fill),
+:root.theme-switching *::before,
+:root.theme-switching *::after {
+  transition: none !important;
 }

@@ -7,7 +7,9 @@ interface SectionProps {
 }
 
 // A label column and a content column. At 1080px wide that is 360 + 720,
-// which keeps 15–17px text at a readable line length
+// which keeps 15–17px text at a readable line length.
+// The label sticks until its section ends: beside the content on desktop, and as a
+// solid bar above it on smaller screens, with a short fade below so content dissolves under it
 export default function Section({ id, label, children }: SectionProps) {
   const labelId = `${id}-label`;
 
@@ -15,12 +17,12 @@ export default function Section({ id, label, children }: SectionProps) {
     <section
       id={id}
       aria-labelledby={labelId}
-      className="border-t border-white/[0.08] py-16 md:py-24"
+      className="rule-t py-16 md:py-24"
     >
-      <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-0">
+      <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-0">
         <h2
           id={labelId}
-          className="font-serif text-[clamp(30px,4vw,40px)] font-medium leading-tight text-white lg:sticky lg:top-12 lg:self-start"
+          className="section-label sticky top-0 z-10 -mx-5 -mt-3 self-start px-5 py-3 font-serif text-[clamp(1.875rem,4vw,2.5rem)] font-light leading-tight text-fg sm:-mx-8 sm:px-8 lg:top-12 lg:m-0 lg:px-0 lg:py-0"
         >
           {label}
         </h2>

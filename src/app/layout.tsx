@@ -56,12 +56,16 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#000000",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+    { media: "(prefers-color-scheme: light)", color: "#fbfbfa" },
+  ],
 };
 
-// Runs before first paint: the intro plays on the first load of a tab,
-// then reloads within the session show the page instantly
-const introScript = `try{if(sessionStorage.getItem("intro")){document.documentElement.dataset.intro="played"}else{sessionStorage.setItem("intro","1")}}catch(e){}`;
+// Runs before first paint, so there's no flash:
+// - applies the theme picked in the footer (none saved = follow the system)
+// - the intro plays on the first load of a tab; reloads within the session show the page instantly
+const headScript = `try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark"){document.documentElement.dataset.theme=t}}catch(e){}try{if(sessionStorage.getItem("intro")){document.documentElement.dataset.intro="played"}else{sessionStorage.setItem("intro","1")}}catch(e){}`;
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -71,7 +75,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       suppressHydrationWarning
     >
       <head>
-        <script dangerouslySetInnerHTML={{ __html: introScript }} />
+        <script dangerouslySetInnerHTML={{ __html: headScript }} />
       </head>
       <body>
         <ScrollbarAutoHide />
